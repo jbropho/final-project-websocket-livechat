@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "jasmine",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development"
