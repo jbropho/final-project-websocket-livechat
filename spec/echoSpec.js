@@ -13,10 +13,10 @@ describe('socket connection', function() {
     client.on('connect', _ => {
       client.on('echo', message => {
         expect(message).toEqual('Hello World');
-        disconnect();
+        client.disconnect();
         done();
       });
-      socket.emit('echo', 'Hello World');
+      client.emit('echo', 'Hello World');
     });
   });
 });
