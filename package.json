@@ -1,0 +1,29 @@
+{
+  "name": "final-project-websocket-livechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jasmine",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbropho/final-project-websocket-livechat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbropho/final-project-websocket-livechat/issues"
+  },
+  "homepage": "https://github.com/jbropho/final-project-websocket-livechat#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.8.2",
+    "jasmine": "^3.1.0"
+  }
+}
