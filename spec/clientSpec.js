@@ -6,7 +6,7 @@ describe('Client', function() {
 
   beforeEach(function() {
     client = require('../src/client.js');
-    socket = client.socket
+    socket = client.socket;
     listenForMessages = client.listenForMessages;
     sendMessage = client.sendMessage;
   });
