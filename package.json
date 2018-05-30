@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "jasmine",
+    "test": "babel-node spec/run.js",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development"
   },
@@ -33,9 +33,13 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
     "jasmine": "^3.1.0",
+    "jasmine-enzyme": "^6.0.1",
+    "jsdom": "^11.11.0",
     "webpack-cli": "^2.1.4"
   }
 }
