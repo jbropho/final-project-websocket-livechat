@@ -4,19 +4,17 @@ import { mount } from "enzyme";
 import Message from "../src/Message";
 
 var props,
-  message;
+  message,
+  makeMessage,
+  children;
 
 beforeEach(done => {
   props = {
-    author: undefined,
-    content: undefined
+    author: 'Irbe',
+    content: 'SPACES!! VIM!!!'
   };
   message = undefined;
-  done();
-});
-
-describe('Message', function () {
-  const makeMessage = _ => {
+   makeMessage = _ => {
     if(!message) {
       message = mount(
         <Message { ...props }/>
@@ -24,7 +22,10 @@ describe('Message', function () {
     }
   return message;
   }
-  
+  done();
+});
+
+describe('Message', function () {
   it('always renders a div', done => {
     const div = makeMessage().find("div");
     expect(div.length).toBeGreaterThan(0);
@@ -32,14 +33,20 @@ describe('Message', function () {
   });
 });
 
-describe('Rendering contents', function() {
-  it('renders the correct message', done => {
-    props = {
-      author: 'Irbe',
-      content: 'SPACES!! VIM!!!'
-    }
-    const contents = makeMessage();
-    expect(contents.contains(<div></div>)).to.equal(true);
+describe('Rendering author', function() {
+  it('shows the correct author', done => {
+    const children = makeMessage().find('div').children();
+    const author = children.find('.author').text();
+    expect(author).toBe('Irbe');
+  done();
+  });
+});
+
+describe('Rendering message', function() {
+  it('shows the correct message', done => {
+    const children = makeMessage().find('div').children();
+    const content = children.find('.content').text();
+    expect(content).toBe('SPACES!! VIM!!!');
   done();
   });
 });
