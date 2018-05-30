@@ -1,21 +1,45 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
-import testUtils from "react-dom";
+import { mount } from "enzyme";
 import Message from "../src/Message";
 
-describe('Message', function () {
-  var element, component;
-	it('displays a message', function(){
-    element = React.createElement(
-      Message,
-      {
+var props,
+  message;
 
-      }
-
-  );
-  expect(function() {
-    component = testUtils.renderIntoDocument(element);
-  }).not.toThrow();
-
+beforeEach(_ => {
+  props = {
+    author: undefined,
+    content: undefined
+  };
+  message = undefined;
 });
-})
+
+describe('Message', function () {
+  const makeMessage = _ => {
+    if(!message) {
+      message = mount(
+        <Message { ...props }/>
+      );
+    }
+  return message;
+  }
+  
+  it('always renders a div', done => {
+    const div = makeMessage().find("div");
+    expect(div.length).toBeGreaterThan(0);
+    done();
+  });
+});
+
+describe('Rendering contents', function() {
+  it('renders the correct message', done => {
+    props = {
+      author: 'Irbe',
+      content: 'SPACES!! VIM!!!'
+    }
+    const contents = makeMessage();
+    expect(contents.contains(<div></div>)).to.equal(true);
+  done();
+  });
+});
+ 
