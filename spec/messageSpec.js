@@ -6,12 +6,13 @@ import Message from "../src/Message";
 var props,
   message;
 
-beforeEach(_ => {
+beforeEach(done => {
   props = {
     author: undefined,
     content: undefined
   };
   message = undefined;
+  done();
 });
 
 describe('Message', function () {
