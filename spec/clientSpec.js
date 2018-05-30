@@ -1,11 +1,11 @@
-var client = require('../src/client.js');
-
 describe('Client', function() {
+  var client;
   var socket;
   var listenForMessages;
   var sendMessage;
 
   beforeEach(function() {
+    client = require('../src/client.js');
     socket = client.socket
     listenForMessages = client.listenForMessages;
     sendMessage = client.sendMessage;
