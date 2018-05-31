@@ -11,8 +11,8 @@ describe('Chatroom', function() {
       props;
 
   beforeEach(done => {
-     props = { thing: 'stuff' }
-   
+     props = { thing: 'stuff' };
+
      makeChatroom = _ => {
         chatroom = mount(<Chatroom {...props}/>)
         return chatroom;
@@ -21,8 +21,16 @@ describe('Chatroom', function() {
   });
 
   it('always renders a div', done => {
-     const result = makeChatroom().find('div');
-     expect(result.length).toBeGreaterThan(0);     
+     const result = makeChatroom().find('#chatroom-container');
+     expect(result.length).toBeGreaterThan(0);
      done();
   });
+
+  it('has a header', done => {
+     const result = makeChatroom().find('#chatroom-header');
+     expect(result.length).toBeGreaterThan(0);
+     done();
+  });
+
+
 });
