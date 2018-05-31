@@ -47,7 +47,6 @@ describe('Chatroom', function() {
     done();
 
   });
-
   it('renders the author of a message', done => {
     const result = makeChatroom().find('.message');
     const author = result.children().find('.author');
