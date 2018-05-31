@@ -22,6 +22,10 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
  Before the project began we laid down ground rules to ensure maximum productivity during the duration of the project and to make sure people were kept clear about what is required from them.
 
+ We aimed to achieve the MVP as quickly as possible to give us the greatest amount of time to build features on top of it. The main challenges in achieving the MVP were deciding which components were needed for the chatroom itself and how to write sufficient tests to make sure we were fully covered.
+
+ Daily stand ups helped us to identify the short goals necessary in order for our MVP to take shape. Retros were not conducted daily as the workflow was very consistent throughout the project. However when it was clear discussion was needed, retros were used to evaluate the work that was done and to identify any improvements that could have been made along the way.
+
 
 
 
