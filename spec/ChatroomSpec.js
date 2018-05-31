@@ -31,6 +31,11 @@ describe('Chatroom', function() {
      expect(result.length).toBeGreaterThan(0);
      done();
   });
+  it('has a message', done => {
+    const result = makeChatroom().find('.message');
+    expect(result.length).toEqual(1);
+    done();
+  })
 
 
 });
