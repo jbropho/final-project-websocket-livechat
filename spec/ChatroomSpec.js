@@ -47,9 +47,4 @@ describe('Chatroom', function() {
     done();
 
   });
-
-
-
-
-
 });

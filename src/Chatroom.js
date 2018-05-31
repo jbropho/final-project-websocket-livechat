@@ -8,6 +8,10 @@ class Chatroom extends Component {
   render() {
     return(
       <div id="chatroom-container">
+        <div>Hello, {this.props.name}</div>
+       </div>
+    );
+  }
         <Header/>
         <Sidebar/>
         <Message/>
@@ -16,7 +20,6 @@ class Chatroom extends Component {
 
     );
   }
-
 }
 
 export default Chatroom;

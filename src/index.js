@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
+import Chatroom from './Chatroom.js';
+import socket from './client.js';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+function startApp(name) {
+  ReactDOM.render(
+    <Chatroom name={name}/>,
+    document.getElementById('root')
+  );
+}
+
+window.startApp = startApp;
