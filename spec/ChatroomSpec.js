@@ -20,7 +20,7 @@ describe('Chatroom', function() {
     done();
   });
 
-it('always renders a div', done => {
+  it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
     expect(result.length).toBeGreaterThan(0);
     done();
@@ -41,6 +41,13 @@ it('always renders a div', done => {
     expect(result.length).toEqual(1);
     done();
   });
+  it('has a sidebar', done => {
+    const result = makeChatroom().find('.online_users');
+    expect(result.length).toEqual(1);
+    done();
+
+  });
+
 
 
 
