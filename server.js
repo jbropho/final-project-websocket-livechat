@@ -5,7 +5,7 @@ const app = require('./app'),
 
 io.sockets.on('connection', socket => {
   socket.on('echo', msg => {
-    socket.emit('echo', msg);
+    io.emit('echo', msg);
   });
 });
 
