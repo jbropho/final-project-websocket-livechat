@@ -50,4 +50,3 @@ describe('Rendering message', function() {
   done();
   });
 });
- 
