@@ -36,11 +36,13 @@ it('always renders a div', done => {
     expect(result.length).toEqual(1);
     done();
   })
-  it ('has a footer', done => {
+  it('has a footer', done => {
     const result = makeChatroom().find('.footer');
     expect(result.length).toEqual(1);
     done();
-  })
+  });
+
+
 
 
 });
