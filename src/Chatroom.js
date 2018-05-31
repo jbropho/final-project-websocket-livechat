@@ -10,7 +10,7 @@ class Chatroom extends Component {
       <div id="chatroom-container">
         <Header/>
         <Sidebar/>
-        <Message/>
+        <Message author="North"/>
         <Footer/>
       </div>
 
@@ -18,5 +18,9 @@ class Chatroom extends Component {
   }
 
 }
-
 export default Chatroom;
+
+
+// {this.props.messages.map(function(msg) {
+//   <Message {...msg} />;
+//  })}

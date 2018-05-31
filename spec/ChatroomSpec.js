@@ -48,6 +48,13 @@ describe('Chatroom', function() {
 
   });
 
+  it('renders the author of a message', done => {
+    const result = makeChatroom().find('.message');
+    const author = result.children().find('.author');
+    expect(author.text()).toEqual('North');
+    done();
+  });
+
 
 
 
