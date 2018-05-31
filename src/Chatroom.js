@@ -13,10 +13,8 @@ class Chatroom extends Component {
         <Message/>
         <Footer/>
       </div>
-
     );
   }
-
 }
 
 export default Chatroom;
