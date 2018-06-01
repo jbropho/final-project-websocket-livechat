@@ -1,6 +1,7 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
+import { shallow } from 'enzyme';
 import Chatroom from "../src/Chatroom";
 
 
@@ -11,7 +12,8 @@ describe('Chatroom', function() {
     props;
 
   beforeEach(done => {
-    props = { thing: 'stuff' };
+    props = {messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]};
+
 
     makeChatroom = _ => {
       chatroom = mount(<Chatroom {...props}/>)
@@ -27,9 +29,9 @@ describe('Chatroom', function() {
   });
 
   it('has a header', done => {
-     const result = makeChatroom().find('#chatroom-header');
-     expect(result.length).toBeGreaterThan(0);
-     done();
+    const result = makeChatroom().find('#chatroom-header');
+    expect(result.length).toBeGreaterThan(0);
+    done();
   });
   it('has a message', done => {
     const result = makeChatroom().find('.message');
@@ -47,11 +49,17 @@ describe('Chatroom', function() {
     done();
 
   });
-
-  it('renders the author of a message', done => {
-    const result = makeChatroom().find('.message');
+  it('renders the content of a message', done => {
+    const wrapper = mount(<Chatroom />);
+    wrapper.setState({messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]});
+    const result = wrapper.find('.message');
     const author = result.children().find('.author');
-    expect(author.text()).toEqual('North');
+    expect(author.text()).toEqual('Xibit');
     done();
   });
+
+
+
+
+
 });
