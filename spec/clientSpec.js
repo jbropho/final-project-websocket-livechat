@@ -1,15 +1,10 @@
 describe('Client', function() {
-  var client;
-  var socket;
-  var listenForMessages;
-  var sendMessage;
 
-  beforeEach(function() {
-    client = require('../src/client.js');
-    socket = client.socket;
-    listenForMessages = client.listenForMessages;
-    sendMessage = client.sendMessage;
-  });
+  var client = require('../src/client.js'),
+    socket = client.socket,
+    listenForMessages = client.listenForMessages,
+    sendMessage = client.sendMessage,
+    killSocket = client.killSocket;
 
   describe('sendMessage', function() {
     it('calls socket.emit', function() {
@@ -24,6 +19,14 @@ describe('Client', function() {
       spyOn(socket, 'on');
       listenForMessages(function() { });
       expect(socket.on).toHaveBeenCalled();
+    });
+  });
+
+  describe('killSocket', function() {
+    it('socket emits wantToDie', function() {
+      spyOn(socket, 'emit');
+      killSocket();
+      expect(socket.emit).toHaveBeenCalled();
     });
   });
 });

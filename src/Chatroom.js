@@ -3,7 +3,7 @@ import Header from './Header';
 import Message from './Message';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import { listenForMessages } from './client.js';
+import { listenForMessages, killSocket } from './client.js';
 
 class Chatroom extends Component {
   constructor(props) {
@@ -14,6 +14,10 @@ class Chatroom extends Component {
 
   componentDidMount() {
     listenForMessages(this.messageAdder);
+  }
+
+  componentWillUnmount() {
+    killSocket(this.props.name);
   }
 
   messageAdder(msg){

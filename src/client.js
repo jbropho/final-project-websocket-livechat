@@ -9,8 +9,14 @@ function sendMessage(msg) {
   socket.emit('message', msg);
 }
 
+function killSocket(name) {
+  socket.emit('wantToDie', name);
+};
+
 export { 
   sendMessage,
   listenForMessages,
+  killSocket,
   socket
 };
+
