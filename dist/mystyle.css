@@ -16,6 +16,33 @@
   background-color: rgba(87, 87, 87, 0.452);
 }
 
+.chatroom-list {
+  position: fixed;
+  top: 100px;
+  bottom: 60px;
+  width: 15%;
+  background-color: rgb(105, 105, 105);
+}
+
+#message-board {
+  position: fixed;
+  top: 100px;
+  bottom: 60px;
+  left: 15%;
+  width: 70%;
+  overflow: auto;
+}
+
+.online_users {
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  top: 100px;
+  width: 15%;
+  background-color: rgb(105, 105, 105);
+  z-index: 100;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -47,9 +74,9 @@
 
 .message {
   position: relative;
-  top: 120px;
+  top: 30px;
   left: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
   color: rgb(252, 255, 233);
   background-color: rgba(82, 82, 82, 0.39);
   width: 80%;
@@ -73,15 +100,6 @@
   font-style: italic;
 }
 
-.online_users {
-  position: fixed;
-  right: 0;
-  bottom: 60px;
-  top: 100px;
-  width: 300px;
-  background-color: rgb(105, 105, 105);
-  z-index: 100;
-}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126

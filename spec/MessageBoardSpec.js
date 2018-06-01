@@ -15,7 +15,7 @@ describe('MessageBoard', function() {
     }
     done();
   });
-  
+
   it('has a div', done => {
     const result = makeMessageBoard().find('div');
     expect(result.length).toBeGreaterThan(0);

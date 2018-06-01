@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
+import RoomList from './RoomList';
 import { listenForMessages } from './client.js';
 
 class Chatroom extends Component {
@@ -26,6 +27,7 @@ class Chatroom extends Component {
       <div id="chatroom-container">
         <Header name={ this.props.name } />
         <Sidebar />
+        <RoomList />
         <MessageBoard messageList={ this.state.messages }/>
         <Footer name={ this.props.name } />
       </div>
