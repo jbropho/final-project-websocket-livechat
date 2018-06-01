@@ -14,7 +14,7 @@ class Chatroom extends Component {
   componentDidMount() {
     const socket = connection;
     socket.on('message', msg => this.setState((prevState) =>{
-     ({ messages: prevState.messages.push(msg) })}));
+     return ({ messages: prevState.messages.concat(msg)})}));
   }
 
   render() {
@@ -27,11 +27,12 @@ class Chatroom extends Component {
       <div id="chatroom-container">
         <Header/>
         <Sidebar/>
-        {messages}
+        {this.state.messages.map(msg => <Message {...msg} />)}
         <Footer/>
       </div>
     );
   }
 }
 
+window.sendMessage = msg => connection.emit('message', msg);
 export default Chatroom;
