@@ -3,7 +3,7 @@ import Header from './chatroomHeader';
 import Message from './Message';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
-import { connection} from './client.js';
+import { socket} from './client.js';
 
 class Chatroom extends Component {
   constructor(props) {
@@ -12,7 +12,6 @@ class Chatroom extends Component {
   }
 
   componentDidMount() {
-    const socket = connection;
     socket.on('message', msg => this.setState((prevState) =>{
      return ({ messages: prevState.messages.concat(msg)})}));
   }
@@ -34,5 +33,5 @@ class Chatroom extends Component {
   }
 }
 
-window.sendMessage = msg => connection.emit('message', msg);
+window.sendMessage = msg => socket.emit('message', msg);
 export default Chatroom;
