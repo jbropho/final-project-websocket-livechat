@@ -8,7 +8,7 @@ import { socket} from './client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = {messages: [{author: 'North', content: 'Too many hops'}]}
+    this.state = {messages: [{}]}
   }
 
   componentDidMount() {
