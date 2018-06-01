@@ -4,8 +4,8 @@ const app = require('./app'),
   io = require('socket.io').listen(http);
 
 io.sockets.on('connection', socket => {
-  socket.on('echo', msg => {
-    io.emit('echo', msg);
+  socket.on('message', msg => {
+    io.emit('message', msg);
   });
 });
 
