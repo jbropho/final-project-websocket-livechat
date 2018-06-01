@@ -27,7 +27,7 @@ class Chatroom extends Component {
         <Header/>
         <Sidebar/>
         {this.state.messages.map(msg => <Message {...msg} />)}
-        <Footer/>
+        <Footer name={this.props.name} />
       </div>
     );
   }
