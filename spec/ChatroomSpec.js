@@ -33,9 +33,9 @@ describe('Chatroom', function() {
     expect(result.length).toBeGreaterThan(0);
     done();
   });
-  it('has a message', done => {
+  it('starts with no messages', done => {
     const result = makeChatroom().find('.message');
-    expect(result.length).toEqual(1);
+    expect(result.length).toEqual(0);
     done();
   })
   it('has a footer', done => {
