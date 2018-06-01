@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from './Header';
+import Header from './chatroomHeader';
 import Message from './Message';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
@@ -27,7 +27,7 @@ class Chatroom extends Component {
         <Header { this.props.name } />
         <Sidebar />
         { this.state.messages.map(msg => <Message { ...msg } />) }
-        <Footer name={ this.props.name } />
+        <Footer { this.props.name } />
       </div>
     );
   }
