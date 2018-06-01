@@ -8,27 +8,30 @@ import { connection} from './client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [] };
+    this.state = {messages: [{author: 'North', content: 'Too many hops'}]}
   }
 
   componentDidMount() {
     const socket = connection;
     socket.on('message', msg => this.setState((prevState) =>{
-    console.log('STATE', this.state);
      ({ messages: prevState.messages.push(msg) })}));
   }
 
   render() {
+    const messages = this.state.messages.map((message) => {
+      return (
+        <Message author={message.author} content={message.content} />
+      );
+    });
     return(
       <div id="chatroom-container">
         <Header/>
         <Sidebar/>
-        <Message/>
+        {messages}
         <Footer/>
       </div>
     );
   }
 }
 
-window.sendMessage = msg => connection.emit('message',msg); 
 export default Chatroom;
