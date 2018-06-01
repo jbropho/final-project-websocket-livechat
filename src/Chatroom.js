@@ -24,7 +24,7 @@ class Chatroom extends Component {
   render() {
     return(
       <div id="chatroom-container">
-        <Header { this.props.name } />
+        <Header name={ this.props.name } />
         <Sidebar />
         { this.state.messages.map(msg => <Message { ...msg } />) }
         <Footer name={ this.props.name } />
