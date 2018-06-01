@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Header from './Header';
-import Message from './Message';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import MessageBoard from './MessageBoard';
 import { listenForMessages } from './client.js';
 
 class Chatroom extends Component {
@@ -26,7 +26,7 @@ class Chatroom extends Component {
       <div id="chatroom-container">
         <Header name={ this.props.name } />
         <Sidebar />
-        { this.state.messages.map(msg => <Message { ...msg } />) }
+        <MessageBoard messageList={ this.state.messages }/>
         <Footer name={ this.props.name } />
       </div>
     );
