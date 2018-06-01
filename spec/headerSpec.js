@@ -1,7 +1,8 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import Header from "../src/chatroomHeader";
+import { shallow } from "enzyme";
+import Header from "../src/Header";
 
 describe('header', function() {
    var makeHeader,
@@ -9,7 +10,7 @@ describe('header', function() {
        props;
 
   beforeEach(done => {
-    props = { title: 'World of Ping Pong' };
+    props = { title: 'World of Ping Pong', name: 'Jordan' };
 
     makeHeader = _ => {
       header = mount(<Header {...props}/>);
@@ -30,4 +31,10 @@ describe('header', function() {
     expect(content).toMatch(/World of Ping Pong/);
     done();
   });
+  it('renders a welcome for a user', done => {
+    const result = makeHeader().find('div');
+    var welcome = result.find('.chatroom-welcome').text();
+    expect(welcome).toMatch(/Welcome Jordan!/);
+    done();
+  })
 });

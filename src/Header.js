@@ -5,6 +5,7 @@ class Header extends Component {
     return(
       <div id="chatroom-header">
         <p className="chatroom-title"> {this.props.title} </p>
+        <p className="chatroom-welcome">Welcome {this.props.name}!</p>
       </div>
     );
   }
