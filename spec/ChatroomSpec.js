@@ -43,12 +43,19 @@ describe('Chatroom', function() {
     expect(result.length).toEqual(1);
     done();
   });
+
   it('has a sidebar', done => {
+    const result = makeChatroom().find('.chatroom-list');
+    expect(result.length).toEqual(1);
+    done();
+  });
+
+  it('has a roomList', done => {
     const result = makeChatroom().find('.online_users');
     expect(result.length).toEqual(1);
     done();
-
   });
+
   it('renders the content of a message', done => {
     const wrapper = mount(<Chatroom />);
     wrapper.setState({messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]});
@@ -57,9 +64,4 @@ describe('Chatroom', function() {
     expect(author.text()).toEqual('Xibit');
     done();
   });
-
-
-
-
-
 });
