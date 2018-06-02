@@ -1,5 +1,6 @@
 const express = require('express'),
-  app = express();
+  app = express(),
+  db = require('./db');
 
 app.use(express.static('dist'));
 app.set('view engine', 'pug');
