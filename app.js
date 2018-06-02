@@ -1,9 +1,12 @@
 const express = require('express'),
   app = express(),
-  db = require('./db');
+  db = require('./db'),
+  auth = require('./routes/auth');
 
 app.use(express.static('dist'));
 app.set('view engine', 'pug');
+
+app.use('/auth', auth);
 
 app.get('/', function(req, res){
   res.sendFile('index.html');
