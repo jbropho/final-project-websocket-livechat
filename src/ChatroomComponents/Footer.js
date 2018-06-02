@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { sendMessage } from './client.js';
+import { sendMessage } from '../client.js';
 
 const messageReader = _ => document.getElementById('text-field').value;
 

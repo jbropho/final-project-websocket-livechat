@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import RoomList from "../src/RoomList";
+import RoomList from "../src/ChatroomComponents/RoomList";
 
 describe('RoomList', function() {
   var makeroomList,

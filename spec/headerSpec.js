@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
 import { shallow } from "enzyme";
-import Header from "../src/Header";
+import Header from "../src/ChatroomComponents/Header";
 
 describe('header', function() {
    var makeHeader,
