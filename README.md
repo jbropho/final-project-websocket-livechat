@@ -1,4 +1,3 @@
-# This is a readme yo
 # Final Project WebSocket Livechat
 
 A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
