@@ -11,7 +11,7 @@ class Footer extends Component{
           <input type="text" id="text-field" maxLength="142" size="142" placeholder="Enter message here..."></input>
         </div>
         <div>
-          <input onClick={ _ => sendMessage({author:this.props.name, content: messageReader() })} id="post-message"></input>
+          <button onClick={ _ => sendMessage({author:this.props.name, content: messageReader() })} id="post-message"> post </button>
         </div>
       </div>
     );

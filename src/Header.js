@@ -16,9 +16,8 @@ class Header extends Component {
     return(
       <div id="chatroom-header">
         <p className="chatroom-title"> { this.props.title } </p>
-        <p className="chatroom-welcome">Welcome { this.props.name }!</p>
-        <input type="submit" value="leave room"
-        onClick={ this.leaveRoom }></input>
+        <p className="chatroom-welcome"> Welcome { this.props.name }! </p>
+        <button type="submit"onClick={ this.leaveRoom }> leave room </button>
       </div>
     );
   }
