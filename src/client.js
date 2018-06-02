@@ -7,7 +7,6 @@ if (process.env.NODE_ENV === 'production')
 else {
   socket = openSocket('http://localhost:8080');
 }
-
 function listenForMessages(cb) {
   socket.on('message', msg => cb(msg));
 }
