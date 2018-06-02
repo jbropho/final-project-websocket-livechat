@@ -1,6 +1,12 @@
 import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:8080');
-
+var socket;
+if (process.env.NODE_ENV === 'production')
+{
+  socket = openSocket('ws://finalprojectwebsocketlivechat.herokuapp.com/');
+}
+else {
+  socket = openSocket('http://localhost:8080');
+}
 function listenForMessages(cb) {
   socket.on('message', msg => cb(msg));
 }
@@ -13,10 +19,9 @@ function killSocket(name) {
   socket.emit('wantToDie', name);
 };
 
-export { 
+export {
   sendMessage,
   listenForMessages,
   killSocket,
   socket
 };
-
