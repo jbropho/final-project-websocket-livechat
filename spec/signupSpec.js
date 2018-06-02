@@ -51,3 +51,16 @@ describe('signing up with username and password', function() {
     });
   });
 });
+
+describe('signing up with repeating username', function() {
+  it('should have 500 status code and false auth', function(done) {
+    const user = { username: 'ilma', password: 'Pass123' };
+    const form = { form: user };
+    User.create(user);
+    request.post(`${HOST}:${PORT}/auth/signup`, form, (err, res, body) => {
+      if(err) console.log(err);
+      expect(res.statusCode).toEqual(500); 
+      done();
+    });
+  });
+});
