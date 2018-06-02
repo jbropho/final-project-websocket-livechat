@@ -2,7 +2,7 @@ import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
 import { shallow } from 'enzyme';
-import Chatroom from "../src/Chatroom";
+import Chatroom from "../src/ChatroomComponents/Chatroom";
 
 
 

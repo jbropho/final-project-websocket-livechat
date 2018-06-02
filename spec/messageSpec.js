@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import Message from "../src/Message";
+import Message from "../src/ChatroomComponents/Message";
 
 var props,
   message,

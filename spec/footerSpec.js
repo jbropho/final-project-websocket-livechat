@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import Footer from "../src/Footer";
+import Footer from "../src/ChatroomComponents/Footer";
 
 describe('footer', function() {
    var makeFooter,

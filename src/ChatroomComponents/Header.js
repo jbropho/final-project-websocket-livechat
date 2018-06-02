@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { killSocket } from './client.js';
+import { killSocket } from '../client.js';
 
 class Header extends Component {
   constructor(props) {
