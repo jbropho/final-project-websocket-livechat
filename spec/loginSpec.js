@@ -6,16 +6,21 @@ const mongoose = require('mongoose'),
   server = require('../server'),
   HOST = 'http://localhost',
   PORT = '8080';
+var user = { username: 'someUser', password: 'Pass123' },
+  fakeUser = { username: 'someUser', password: 'fakePass' },
+  encryptedUser = { username: user.username, password: bcrypt.hashSync(user.password) },
+  path = `${HOST}:${PORT}/auth/login`;
 
-beforeEach(done => {
+beforeAll(done => {
   User.remove({}, err => {
   done();
   });
+  User.create(encryptedUser);
 });
 
 describe('get login', function() {
   it('should return 200 status code', function (done) {
-    request.get(`${HOST}:${PORT}/auth/login`, (err, res) => {
+    request.get(path, (err, res) => {
       expect(res.statusCode).toEqual(200);
       done();
     });
@@ -24,16 +29,12 @@ describe('get login', function() {
 
 describe('logging in with valid username and password', function() {
   it('should allow login', function(done) {
-    const hashedPassword = bcrypt.hashSync('Pass123');
-    const user = { username: 'mille', password: hashedPassword };
-    User.create(user);
-    const returningUser = { username: 'mille', password: 'Pass123' };
-    request.post(`${HOST}:${PORT}/auth/login`, { form: returningUser }, (err, res, body) => {
+    request.post(path, { form: user }, (err, res, body) => {
       if(err) console.log(err);
       body = JSON.parse(body);
       expect(res.statusCode).toEqual(200);
       expect(body["auth"]).toBe(true);
-      expect(body["name"]).toEqual('mille');
+      expect(body["name"]).toEqual(user.username);
     });
     done();
   });
@@ -41,11 +42,7 @@ describe('logging in with valid username and password', function() {
 
 describe('logging in with invalid password', function() {
   it('should refuse login', function(done) {
-    const hashedPassword = bcrypt.hashSync('Pass123');
-    const user = { username: 'mille', password: hashedPassword };
-    User.create(user);
-    const fakeUser = { username: 'mille', password: 'fake' };
-    request.post(`${HOST}:${PORT}/auth/login`, { form: fakeUser }, (err, res, body) => {
+    request.post(path, { form: fakeUser }, (err, res, body) => {
       if(err) console.log(err);
       body = JSON.parse(body);
       expect(res.statusCode).toEqual(401);
