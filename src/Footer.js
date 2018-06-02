@@ -3,6 +3,13 @@ import { sendMessage } from './client.js';
 
 const messageReader = _ => document.getElementById('text-field').value;
 
+const clearMessageField = _ => document.getElementById('text-field').value = '';
+
+const handlePostClick = name => {
+  sendMessage({ author: name, content: messageReader() });
+  clearMessageField();
+}
+
 class Footer extends Component{
   render(){
     return(
@@ -11,7 +18,7 @@ class Footer extends Component{
           <input type="text" id="text-field" maxLength="142" size="142" placeholder="Enter message here..."></input>
         </div>
         <div>
-          <input onClick={ _ => sendMessage({author:this.props.name, content: messageReader() })} id="post-message"></input>
+          <button onClick={ _ => handlePostClick(this.props.name) }> post </button>
         </div>
       </div>
     );

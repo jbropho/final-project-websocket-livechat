@@ -7,6 +7,10 @@ io.sockets.on('connection', socket => {
   socket.on('message', msg => {
     io.emit('message', msg);
   });
+  socket.on('wantToDie', name => {
+    console.log(`${name} left`);
+    socket.disconnect();
+  });
 });
 
 
