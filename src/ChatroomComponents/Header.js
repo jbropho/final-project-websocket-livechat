@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { killSocket } from '../client.js';
+import { killSocket } from './client.js';
 
 class Header extends Component {
   constructor(props) {
@@ -9,7 +9,11 @@ class Header extends Component {
 
   leaveRoom(event) {
     killSocket(this.props.name);
-    window.location.href = 'http://localhost:8080/';
+    if (process.env.NODE_ENV === 'production') {
+      window.location.href = 'ws://finalprojectwebsocketlivechat.herokuapp.com/';
+    } else {
+      window.location.href = 'http://localhost:8080/';
+    }
   }
 
   render() {
