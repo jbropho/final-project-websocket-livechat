@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "babel-node spec/run.js",
+    "test": "NODE_ENV=test babel-node spec/run.js",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development"
   },
