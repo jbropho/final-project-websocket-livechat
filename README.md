@@ -1,4 +1,5 @@
 # Final Project WebSocket Livechat
+<div align="center"><img width="500" src="./doge.png" alt="MuchAgile"></div>
 
 A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
 
@@ -13,10 +14,10 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
 ### To test
  * npm test
- 
+
  ### To run
  * npm start
- 
+
 
 # Our approach
  The main aim of our project was to learn and use some new technologies. We debated writing the backend of our app (how the client will integrate with the server) in Scala
