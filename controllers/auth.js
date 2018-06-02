@@ -14,5 +14,20 @@ module.exports = {
     
       res.status(201).send({ auth: true, token: token, name: user.username });
     });
+  },
+
+  login: (req, res) => {
+    User.findOne({ username: req.body.username }, (err, user) => {
+      if(err) return res.status(500).send('Error on the server.');
+      if(!user) return res.status(404).send({ token: null, auth: false, message: 'No user found.' });
+  
+      const isPasswordValid = bcrypt.compareSync(req.body.password, user.password);
+      if(!isPasswordValid) return res.status(401).send({ message: 'invalid password', auth: false, token: null });
+
+      const token = jwt.sign({ id: user._id }, 'secret', { expiresIn: 86400 });
+
+      res.status(200).send({ auth: true, token: token, name: user.username });
+    });
   }
+
 }
