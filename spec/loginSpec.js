@@ -38,3 +38,19 @@ describe('logging in with valid username and password', function() {
     done();
   });
 });
+
+describe('logging in with invalid password', function() {
+  it('should refuse login', function(done) {
+    const hashedPassword = bcrypt.hashSync('Pass123');
+    const user = { username: 'mille', password: hashedPassword };
+    User.create(user);
+    const fakeUser = { username: 'mille', password: 'fake' };
+    request.post(`${HOST}:${PORT}/auth/login`, { form: fakeUser }, (err, res, body) => {
+      if(err) console.log(err);
+      body = JSON.parse(body);
+      expect(res.statusCode).toEqual(401);
+      expect(body["auth"]).toBe(false);
+    });
+    done();
+  });
+});
