@@ -11,3 +11,12 @@ beforeEach(done => {
   done();
   });
 });
+
+describe('get login', function() {
+  it('should return 200 status code', function (done) {
+    request.get(`${HOST}:${PORT}/auth/login`, (err, res) => {
+      expect(res.statusCode).toEqual(200);
+      done();
+    });
+  });
+});
