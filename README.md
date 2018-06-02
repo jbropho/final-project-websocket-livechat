@@ -16,6 +16,8 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
  * npm test
 
  ### To run
+  
+ * npm bundle
  * npm start
 
 
