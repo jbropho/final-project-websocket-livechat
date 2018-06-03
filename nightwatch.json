@@ -7,12 +7,12 @@
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : false,
-    "server_path" : "",
+    "start_process" : true,
+    "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server-standalone-3.9.1.jar",
     "log_path" : "",
     "port" : 8080,
     "cli_args" : {
-      "webdriver.chrome.driver" : "",
+      "webdriver.chrome.driver" : "/Users/mattburgoyne/Applications",
       "webdriver.gecko.driver" : "",
       "webdriver.edge.driver" : ""
     }
