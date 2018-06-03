@@ -1,4 +1,5 @@
 this.loginTest = function(browser) {
   browser
-    .url('http://localhost:8080/');
+    .url('http://localhost:8080/')
+    .end();
 };
