@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { sendMessage } from '../client.js';
 
 const messageReader = _ => document.getElementById('text-field').value;
-
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
 const handlePostClick = name => {

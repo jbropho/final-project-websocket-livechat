@@ -40,6 +40,7 @@
     "jasmine": "^3.1.0",
     "jasmine-enzyme": "^6.0.1",
     "jsdom": "^11.11.0",
+    "nightwatch": "^0.9.21",
     "react-addons-test-utils": "^15.6.2",
     "webpack-cli": "^2.1.4"
   }
