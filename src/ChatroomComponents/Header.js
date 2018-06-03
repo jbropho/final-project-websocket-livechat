@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { killSocket } from '../client.js';
-import { findWebsocketAdress } from '../helpers.js';
+import { findWebsocketAddress } from '../helpers.js';
 
 class Header extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Header extends Component {
 
   leaveRoom(event) {
     killSocket(this.props.name);
-    window.location.href = findWebsocketAdress();
+    window.location.href = findWebsocketAddress();
   }
 
   render() {
