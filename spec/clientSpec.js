@@ -4,7 +4,8 @@ describe('Client', function() {
     socket = client.socket,
     listenForMessages = client.listenForMessages,
     sendMessage = client.sendMessage,
-    killSocket = client.killSocket;
+    killSocket = client.killSocket,
+    joinRoom = client.joinRoom;
 
   describe('sendMessage', function() {
     it('calls socket.emit', function() {
@@ -20,6 +21,14 @@ describe('Client', function() {
       listenForMessages(function() { });
       expect(socket.on).toHaveBeenCalled();
     });
+  });
+
+  describe('joinRoom', function() {
+    it('socket emits welcome', function() {
+      spyOn(socket, 'emit');
+      joinRoom();
+      expect(socket.emit).toHaveBeenCalled();
+    })
   });
 
   describe('killSocket', function() {
