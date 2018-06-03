@@ -10,6 +10,9 @@ else {
 function listenForMessages(cb) {
   socket.on('message', msg => cb(msg));
 }
+function joinRoom(name) {
+  socket.emit('clientJoin', name);
+}
 
 function sendMessage(msg) {
   socket.emit('message', msg);
@@ -23,5 +26,6 @@ export {
   sendMessage,
   listenForMessages,
   killSocket,
+  joinRoom,
   socket
 };

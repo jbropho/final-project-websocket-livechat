@@ -10,6 +10,9 @@ io.sockets.on('connection', socket => {
     console.log(`${name} left`);
     socket.disconnect();
   });
+  socket.on('clientJoin', name => {
+    console.log(`${name} joined`);
+  });
 });
 http.listen(port, console.log(`Listening on port ${port}`));
 module.exports = http;
