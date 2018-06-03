@@ -1,7 +1,8 @@
 const app = require('./app'),
   http = require('http').Server(app),
-  port = 8080,
+  port = process.env.PORT || 8080,
   io = require('socket.io').listen(http);
+  
 io.sockets.on('connection', socket => {
   socket.on('message', msg => {
     io.emit('message', msg);
