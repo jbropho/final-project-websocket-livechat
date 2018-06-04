@@ -4,8 +4,8 @@ import Footer from './Footer';
 import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
-import { listenForMessages } from '../client.js';
-import { subscribeToRoom } from '../client.js';
+import { listenForMessages, subscribeToRoom } from '../client.js';
+
 
 class Chatroom extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Chatroom extends Component {
       this.state.activeRooms.push(room);
       subscribeToRoom(room, this.props.name);
       this.state.messages[room] = [];
-    } 
+    }
   }
 
   messageAdder(msg, room = 'main'){

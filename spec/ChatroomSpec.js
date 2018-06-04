@@ -76,7 +76,7 @@ describe('Chatroom', function() {
       done();
     })
   })
-  
+
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
     expect(result.length).toBeGreaterThan(0);
