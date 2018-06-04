@@ -9,8 +9,8 @@ import { listenForMessages } from '../client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [] }
-    this.messageAdder = this.messageAdder.bind(this);   
+    this.state = { messages: [], roomlist: [] }
+    this.messageAdder = this.messageAdder.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ class Chatroom extends Component {
       <div id="chatroom-container">
         <Header name={ this.props.name } />
         <Sidebar />
-        <RoomList />
+        <RoomList roomlist={ this.state.roomlist }/>
         <MessageBoard messageList={ this.state.messages }/>
         <Footer name={ this.props.name } />
       </div>
