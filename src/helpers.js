@@ -12,11 +12,8 @@ const messageReader = _ => document.getElementById('text-field').value;
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
 function handlePostClick(name) {
-  var string = document.getElementById('text-field').value;
-  if(string) {
-    sendMessage({ author: name, content: messageReader() });
-    clearMessageField();
-  }
+  var message = document.getElementById('text-field').value;
+  checkIfMessageEmptyAndSend(message);
   document.getElementById("text-field").focus();
 }
 
@@ -27,6 +24,12 @@ function enterClick() {
     didUserEnter();
   }
 )}
+function checkIfMessageEmptyAndSend(string) {
+  if(string) {
+    sendMessage({ author: name, content: messageReader() });
+    clearMessageField();
+  }
+}
 
 function didUserEnter(userText, clickedButton) {
   if (userText.value && event.keyCode === 13) {
