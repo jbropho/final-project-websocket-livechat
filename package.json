@@ -9,7 +9,6 @@
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development",
     "featuretest": "nightwatch spec/features"
-
   },
   "repository": {
     "type": "git",
