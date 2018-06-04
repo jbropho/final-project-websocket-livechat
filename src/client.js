@@ -3,8 +3,8 @@ import { findWebsocketAddress } from './helpers.js';
 
 var socket = openSocket(findWebsocketAddress());
 
-function listenForMessages(cb) {
-  socket.on('message', msg => cb(msg));
+function listenForMessages(roomName, cb) {
+  socket.on(roomName, msg => cb(msg));
 }
 
 function subscribeToRoom(roomName, name) {
@@ -12,7 +12,7 @@ function subscribeToRoom(roomName, name) {
 }
 
 function sendMessage(msg) {
-  socket.emit('message', msg);
+  socket.emit('main', msg);
 }
 
 function killSocket(name) {

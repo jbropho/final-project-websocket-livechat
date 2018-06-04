@@ -5,7 +5,7 @@ describe('Client', function() {
     listenForMessages = client.listenForMessages,
     sendMessage = client.sendMessage,
     killSocket = client.killSocket,
-    joinRoom = client.joinRoom;
+    subscribeToRoom = client.subscribeToRoom;
 
   describe('sendMessage', function() {
     it('calls socket.emit', function() {
@@ -23,10 +23,10 @@ describe('Client', function() {
     });
   });
 
-  describe('joinRoom', function() {
+  describe('subscribeToRoom', function() {
     it('socket emits welcome', function() {
       spyOn(socket, 'emit');
-      joinRoom('clientJoin');
+      subscribeToRoom('clientJoin');
       expect(socket.emit).toHaveBeenCalled();
     })
   });
