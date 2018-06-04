@@ -15,8 +15,6 @@ app.get('/', function(req, res){
   res.sendFile('index.html');
 });
 
-app.get('/chatroom', function(req, res){
-  res.render('chatroom', { name: req.query.username });
-});
+app.get('/chatroom', (req, res) => res.render('chatroom'));
 
 module.exports = app;
