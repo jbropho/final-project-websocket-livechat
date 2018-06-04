@@ -8,6 +8,10 @@ io.sockets.on('connection', socket => {
     io.emit('message', msg);
   });
 
+  socket.on('main', msg => {
+    io.emit('main', msg);
+  });
+
   socket.on('joinRoom', roomName => {
     socket.join(roomName);
 
