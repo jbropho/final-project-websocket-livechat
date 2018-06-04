@@ -4,7 +4,9 @@ window.onload = _ => listen();
 
 const listen = _ => {
   let signup = document.getElementById('signup');
+  let login = document.getElementById('login');
   let chat = document.getElementById('chat');
+  login && login.addEventListener('click', onLogin);
   signup && signup.addEventListener('click', onSignup);
   chat && chat.addEventListener('click', onChat);
 }
@@ -18,13 +20,18 @@ const submitUserDetails = ext => {
   return sendRequest('POST', url, params, headers);
 }; 
 
+async function onLogin(e) {
+  await submitUserDetails('auth/login').then(result => processResult(result)).catch(err => { console.log(err); e.preventDefault()});
+  redirect(`${HOME}?username=${window.sessionStorage.name}`);
+  e.preventDefault();
+}
+
 async function onSignup(e) {
   await submitUserDetails('auth/signup').then(result => processResult(result)).catch(err => {console.log(err); e.preventDefault()})
   redirect(`${HOME}?username=${window.sessionStorage.name}`);
   e.preventDefault();
 };
 async function onChat(e) {
-  console.log('ENTERING');
   const url = `${HOME}chat/verify`;
   const headers = { 'x-access-token': token() }
   const json = await sendRequest('GET', url, '', headers).then(res => JSON.parse(res)).catch(err => console.log('ERROR is ', err));

@@ -29,5 +29,4 @@ module.exports = {
       res.status(200).send({ auth: true, token: token, name: user.username });
     });
   }
-
 }
