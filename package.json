@@ -5,10 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "babel-node spec/run.js",
+    "test": "babel-node spec/run.js; nightwatch spec/features",
     "lint": "./node_modules/.bin/eslint .",
-    "bundle": "npx webpack --mode development",
-    "featuretest": "nightwatch spec/features"
+    "bundle": "npx webpack --mode development"
   },
   "repository": {
     "type": "git",
