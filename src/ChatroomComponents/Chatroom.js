@@ -5,16 +5,27 @@ import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import { listenForMessages } from '../client.js';
+import { subscibeToRoom } from '../client.js';
 
 class Chatroom extends Component {
   constructor(props) {
     super(props);
+    this.state = { messages: [], roomlist: [], activeRooms: [] };
     this.state = { messages: [], roomlist: [] };
     this.messageAdder = this.messageAdder.bind(this);
+    this.joinRoom = this.joinRoom.bind(this);
   }
 
   componentDidMount() {
     listenForMessages(this.messageAdder);
+  }
+
+  isInRoom(room) {
+    return this.state.activeRooms.includes(room);
+  }
+
+  joinRoom(room) {
+    if (!this.isInRoom(room)) this.state.activeRooms.push(room);
   }
 
   messageAdder(msg){
