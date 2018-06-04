@@ -1,5 +1,6 @@
+import { WebSocket, Server, SocketIO } from 'mock-socket';
+const chatSocket = new WebSocket('ws://localhost:8080');
 describe('Client', function() {
-
   var client = require('../src/client.js'),
     socket = client.socket,
     listenForMessages = client.listenForMessages,
@@ -14,7 +15,6 @@ describe('Client', function() {
       expect(socket.emit).toHaveBeenCalled();
     });
   });
-
   describe('listenForMessages', function() {
     it('calls socket.on', function() {
       spyOn(socket, 'on');
@@ -22,7 +22,6 @@ describe('Client', function() {
       expect(socket.on).toHaveBeenCalled();
     });
   });
-
   describe('subscribeToRoom', function() {
     it('socket emits welcome', function() {
       spyOn(socket, 'emit');
