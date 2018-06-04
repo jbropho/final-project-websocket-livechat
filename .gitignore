@@ -1,7 +1,6 @@
 dist/bundle.js
 node_modules
 package-lock.json
-.babelrc
 nightwatch.json
 selenium-debug.log
 reports/CHROME_66.0.3359.181_Mac OS X_loginTest.xml
