@@ -26,9 +26,9 @@ describe('Chatroom', function() {
     it('adds a message to state', done => {
       const chat = shallow(<Chatroom />);
       var room = chat.instance();
-      room.state = { messages: [ 'hello world' ] };
+      room.state = { messages: { 'main': ['hello world' ] } };
       room.messageAdder('another message');
-      expect(room.state.messages.length).toBe(2);
+      expect(room.state.messages.main.length).toBe(2);
       done();
      });
   });
@@ -62,8 +62,8 @@ describe('Chatroom', function() {
       room = chat.instance();
     });
 
-    it('adds a room to activeRooms if not already in room', done => {
-      room.state = { activeRooms: [] };
+    it('adds a room to activeRooms if user not already in room', done => {
+      room.state = { activeRooms: [], messages: {} };
       room.joinRoom('the-thing');
       expect(room.state.activeRooms[0]).toMatch(/the-thing/);
       done();
@@ -76,7 +76,7 @@ describe('Chatroom', function() {
       done();
     })
   })
-  
+
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
     expect(result.length).toBeGreaterThan(0);
@@ -113,7 +113,7 @@ describe('Chatroom', function() {
 
   it('renders the content of a message', done => {
     const wrapper = mount(<Chatroom />);
-    wrapper.setState({messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]});
+    wrapper.setState({messages: { main: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]}});
     const result = wrapper.find('.message');
     const author = result.children().find('.author');
     expect(author.text()).toEqual('Xibit');

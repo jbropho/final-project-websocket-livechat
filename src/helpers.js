@@ -13,8 +13,8 @@ const messageReader = _ => document.getElementById('text-field').value;
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
 function handlePostClick(name) {
-  var message = document.getElementById('text-field').value;
-  checkIfMessageEmptyAndSend(message);
+  var message = messageReader();
+  checkIfMessageEmptyAndSend(name, message);
   document.getElementById("text-field").focus();
 }
 
@@ -25,8 +25,8 @@ function enterClick() {
     didUserEnter();
   }
 )}
-function checkIfMessageEmptyAndSend(string) {
-  if(string) {
+function checkIfMessageEmptyAndSend(name, message) {
+  if(message) {
     sendMessage({ author: name, content: messageReader() });
     clearMessageField();
   }
