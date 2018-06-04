@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import { handlePostClick } from '../helpers.js';
-import { enterClick, messageReader, clearMesssageField } from '../helpers.js';
-import { sendMessage } from '../client.js';
-
-
-
+import { handlePostClick, enterClick, messageReader, clearMesssageField } from '../helpers.js';
 
 
 class Footer extends Component{
