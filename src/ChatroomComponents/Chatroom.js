@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import { listenForMessages } from '../client.js';
-import { subscibeToRoom } from '../client.js';
+import { subscribeToRoom } from '../client.js';
 
 class Chatroom extends Component {
   constructor(props) {
@@ -26,14 +26,13 @@ class Chatroom extends Component {
   joinRoom(room) {
     if (!this.isInRoom(room)) {
       this.state.activeRooms.push(room);
-      subscibeToRoom(room, this.props.name);
+      subscribeToRoom(room, this.props.name);
       this.state.messages[room] = [];
     } 
   }
 
   messageAdder(msg, room = 'main'){
     this.setState(prevState => {
-     console.log(this.state);
      prevState.messages[room] = prevState.messages[room].concat(msg);
      return prevState;
     })
