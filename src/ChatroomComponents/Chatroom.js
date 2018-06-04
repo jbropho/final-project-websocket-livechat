@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import { listenForMessages } from '../client.js';
+import { subscibeToRoom } from '../client.js';
 
 class Chatroom extends Component {
   constructor(props) {

@@ -7,7 +7,7 @@ function listenForMessages(cb) {
   socket.on('message', msg => cb(msg));
 }
 
-function joinRoom(roomName, name) {
+function subscribeToRoom(roomName, name) {
   socket.emit(roomName, name);
 }
 
@@ -23,6 +23,6 @@ export {
   sendMessage,
   listenForMessages,
   killSocket,
-  joinRoom,
+  subscribeToRoom,
   socket
 };
