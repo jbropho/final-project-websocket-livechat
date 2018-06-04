@@ -7,7 +7,7 @@
     "start": "node server.js",
     "test": "babel-node spec/run.js",
     "lint": "./node_modules/.bin/eslint .",
-    "bundle": "npx webpack --mode development",
+    "bundle": "npx webpack --mode development"
   },
   "repository": {
     "type": "git",
