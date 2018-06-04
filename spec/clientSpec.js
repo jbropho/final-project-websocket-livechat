@@ -1,5 +1,6 @@
 import { WebSocket, Server, SocketIO } from 'mock-socket';
 const chatSocket = new WebSocket('ws://localhost:8080');
+
 describe('Client', function() {
   var client = require('../src/client.js'),
     socket = client.socket,
