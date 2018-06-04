@@ -10,7 +10,7 @@ import { subscibeToRoom } from '../client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [], roomlist: [] }
+    this.state = { messages: [], roomlist: [], activeRooms: [] };
     this.messageAdder = this.messageAdder.bind(this);
     this.joinRoom = this.joinRoom.bind(this);
   }
@@ -24,7 +24,7 @@ class Chatroom extends Component {
   }
 
   joinRoom(room) {
-    
+    if (!this.isInRoom(room)) this.state.activeRooms.push(room);
   }
 
   messageAdder(msg){

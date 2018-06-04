@@ -39,7 +39,7 @@ describe('Chatroom', function() {
 
     beforeEach(function() {
       room = chat.instance();
-    })
+    });
 
     it('returns true when in a room', done => {
       room.state = { activeRooms: [ 'theDonald'] };
@@ -53,6 +53,29 @@ describe('Chatroom', function() {
       done();
     });
   });
+
+  describe('joinRoom', function() {
+    const chat = shallow(<Chatroom />);
+    var room;
+
+    beforeEach(function() {
+      room = chat.instance();
+    });
+
+    it('adds a room to activeRooms if not already in room', done => {
+      room.state = { activeRooms: [] };
+      room.joinRoom('the-thing');
+      expect(room.state.activeRooms[0]).toMatch(/the-thing/);
+      done();
+    });
+
+    it('does not add a room that is already present', done => {
+      room.state = { activeRooms: ['ping-pong'] };
+      room.joinRoom('ping-pong');
+      expect(room.state.activeRooms.length).toBe(1);
+      done();
+    })
+  })
   
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
