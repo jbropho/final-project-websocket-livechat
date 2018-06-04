@@ -10,14 +10,13 @@ import { subscibeToRoom } from '../client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [], roomlist: [], activeRooms: [] };
-    this.state = { messages: [], roomlist: [] };
+    this.state = { messages: { main: [] } , roomlist: ['main'], activeRooms: ['main'], currentRoom: 'main' };
     this.messageAdder = this.messageAdder.bind(this);
     this.joinRoom = this.joinRoom.bind(this);
   }
 
   componentDidMount() {
-    listenForMessages(this.messageAdder);
+    listenForMessages('main', this.messageAdder);
   }
 
   isInRoom(room) {
@@ -25,12 +24,19 @@ class Chatroom extends Component {
   }
 
   joinRoom(room) {
-    if (!this.isInRoom(room)) this.state.activeRooms.push(room);
+    if (!this.isInRoom(room)) {
+      this.state.activeRooms.push(room);
+      subscibeToRoom(room, this.props.name);
+      this.state.messages[room] = [];
+    } 
   }
 
-  messageAdder(msg){
-    this.setState(prevState =>(
-    { messages: prevState.messages.concat(msg) }) );
+  messageAdder(msg, room = 'main'){
+    this.setState(prevState => {
+     console.log(this.state);
+     prevState.messages[room] = prevState.messages[room].concat(msg);
+     return prevState;
+    })
   }
 
   render() {
@@ -39,12 +45,11 @@ class Chatroom extends Component {
         <Header name={ this.props.name } />
         <Sidebar />
         <RoomList roomlist={ this.state.roomlist }/>
-        <MessageBoard messageList={ this.state.messages }/>
+        <MessageBoard messageList={ this.state.messages[this.state.currentRoom] }/>
         <Footer name={ this.props.name } />
       </div>
     );
   }
 }
-
 
 export default Chatroom;
