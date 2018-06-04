@@ -22,7 +22,7 @@ function enterClick() {
   document.addEventListener("keyup", function(event){
     var clickedButton = document.getElementById("send-msg");
     var userText = document.getElementById('text-field');
-    didUserEnter();
+    didUserEnter(userText, clickedButton);
   }
 )}
 function checkIfMessageEmptyAndSend(name, message) {
