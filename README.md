@@ -9,6 +9,9 @@ A live chat style app using WebSockets that is designed for programmers to colla
 ## Link to project board
 https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
+### To unit test
+ * npm test
+
  ### To run
  * clone repo
  * npm run bundle
@@ -17,6 +20,11 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
  ### To test
  * npm test
+  
+ ### To feature test
+ * Ensure you have chromedriver downloaded and point nightwatch to the installation in the nightwatch.json file
+ * In three different terminal windows, run selenium-standalone start, in the other run npm start, and in the final one npm run featuretest to run the feature tests 
+ 
 
 # Our approach
  The main aim of our project was to learn and use some new technologies. We debated writing the backend of our app (how the client will integrate with the server) in Scala
