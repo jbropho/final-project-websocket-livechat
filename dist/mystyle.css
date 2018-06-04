@@ -12,8 +12,13 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 81px;
   background-color: rgba(87, 87, 87, 0.452);
+  color: #54aefe;
+  font-size: 2em;
+  padding-top: 0.6em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+  font-style: normal;
 }
 
 .chatroom-list {
@@ -31,6 +36,9 @@
   left: 15%;
   width: 70%;
   overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 2.4em;
 }
 
 .online_users {
@@ -104,8 +112,9 @@ transition-duration: 0.2s;
   padding-top: 20px;
   color: rgb(252, 255, 233);
   background-color: rgba(82, 82, 82, 0.39);
-  width: 80%;
+  width: 90%;
   height: 60px;
+  border-top: 1px solid #54aefe
 }
 
 .author, .content {
@@ -113,7 +122,6 @@ transition-duration: 0.2s;
   left: 15px;
   top: 5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
 }
 
 .author {
