@@ -12,8 +12,13 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
  1. Clone this repo
  2. Open index.html in the browser
 
-### To test
+### To unit test
  * npm test
+ 
+ ### To feature test
+ * Ensure you have chromedriver downloaded and point nightwatch to the installation in the nightwatch.json file
+ * In three different terminal windows, run selenium-standalone start, in the other run npm start, and in the final one npm run featuretest to run the feature tests 
+ 
 
  ### To run
  * npm start
