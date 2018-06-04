@@ -22,6 +22,17 @@ describe('Chatroom', function() {
     done();
   });
 
+  describe('Message adder', function() {
+    it('adds a message to state', done => {
+      const chat = shallow(<Chatroom />);
+      var room = chat.instance();
+      room.state = { messages: [ 'hello world' ] };
+      room.messageAdder('another message');
+      expect(room.state.messages.length).toBe(2);
+      done();
+     });
+  });
+  
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
     expect(result.length).toBeGreaterThan(0);
@@ -64,4 +75,6 @@ describe('Chatroom', function() {
     expect(author.text()).toEqual('Xibit');
     done();
   });
+
+
 });
