@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="2">
+            tests="3">
 
   <testsuite name="loginTest"
     errors="0" failures="0" hostname="" id="" package="loginTest" skipped="0"
-    tests="2" time="3.556" timestamp="Mon, 04 Jun 2018 11:03:55 GMT">
+    tests="3" time="5.981" timestamp="Mon, 04 Jun 2018 12:21:40 GMT">
   
-    <testcase name="fieldForInput" classname="loginTest" time="1.063" assertions="1">
+    <testcase name="loginInput" classname="loginTest" time="1.055" assertions="1">
 
     
     </testcase>
   
-    <testcase name="userHasWelcome" classname="loginTest" time="2.493" assertions="1">
+    <testcase name="headerVisible" classname="loginTest" time="2.412" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="userHasWelcome" classname="loginTest" time="2.514" assertions="1">
 
     
     </testcase>
