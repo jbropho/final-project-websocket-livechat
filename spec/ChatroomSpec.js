@@ -42,13 +42,13 @@ describe('Chatroom', function() {
     })
 
     it('returns true when in a room', done => {
-      room.state = { rooms: [ 'theDonald'] };
+      room.state = { activeRooms: [ 'theDonald'] };
       expect(room.isInRoom('theDonald')).toBe(true);
       done();
     });
 
     it('returns false when not in a room', done => {
-      room.state = { rooms: [ ] };
+      room.state = { activeRooms: [ ] };
       expect(room.isInRoom('theDonald')).toBe(false);
       done();
     });

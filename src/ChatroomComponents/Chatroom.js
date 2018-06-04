@@ -19,7 +19,7 @@ class Chatroom extends Component {
   }
 
   isInRoom(room) {
-    return this.state.rooms.includes(room);
+    return this.state.activeRooms.includes(room);
   }
 
   joinRoom(room) {
