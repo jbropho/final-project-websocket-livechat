@@ -5,8 +5,8 @@ import RoomList from "../src/ChatroomComponents/RoomList";
 
 describe('RoomList', function() {
   var makeroomList,
-      roomList,
-      props;
+    roomList,
+    props;
   beforeEach(done => {
     props = {};
     makeroomList = _ => {
