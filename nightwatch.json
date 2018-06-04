@@ -28,12 +28,6 @@
         "enabled" : false,
         "path" : ""
       },
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "javascriptEnabled" : true,
-        "marionette": true
-      }
-    },
 
     "chrome" : {
       "desiredCapabilities": {
