@@ -13,6 +13,13 @@
     "type": "git",
     "url": "git+https://github.com/jbropho/final-project-websocket-livechat.git"
   },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "**/*Spec.js",
+      "build"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
