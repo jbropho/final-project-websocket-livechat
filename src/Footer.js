@@ -25,7 +25,7 @@ class Footer extends Component{
     return(
       <div className="footer">
         <div className="input">
-          <input autofocus="true" id="text-field" maxLength="142" placeholder="Enter message here...">
+          <input autoFocus="true" id="text-field" maxLength="142" placeholder="Enter message here...">
           </input>
           <button className="btn" id="send-msg" onClick={ _ => handlePostClick(this.props.name) }> &#x21e8; </button>
         </div>
