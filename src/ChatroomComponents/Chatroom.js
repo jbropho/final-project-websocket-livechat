@@ -11,6 +11,7 @@ class Chatroom extends Component {
   constructor(props) {
     super(props);
     this.state = { messages: [], roomlist: [], activeRooms: [] };
+    this.state = { messages: [], roomlist: [] };
     this.messageAdder = this.messageAdder.bind(this);
     this.joinRoom = this.joinRoom.bind(this);
   }
@@ -44,5 +45,6 @@ class Chatroom extends Component {
     );
   }
 }
+
 
 export default Chatroom;

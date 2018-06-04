@@ -55,11 +55,36 @@
 .input {
   position: relative;
   height: 40px;
-  width: 80%;
+  width: 94%;
   top: 10px;
   left: 20px;
   border: 1px solid  rgb(86, 173, 255);
   z-index: 100;
+}
+
+.btn {
+  font-size: large;
+  color: #707070;
+  background-color: unset;
+}
+
+#send-msg {
+position: absolute;
+margin-left: -90px;
+height: 100%;
+width: 90;
+float: right;
+border: unset;
+border-left: 1px solid #54aefe;
+-webkit-transition-duration: 0.2s; /* Safari */
+transition-duration: 0.2s;
+}
+
+.btn:hover, .active {
+  background-color: lightSteelBlue;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 #text-field {
@@ -88,7 +113,7 @@
   left: 15px;
   top: 5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  
+
 }
 
 .author {
