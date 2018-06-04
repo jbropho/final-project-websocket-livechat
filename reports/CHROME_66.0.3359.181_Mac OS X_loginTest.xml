@@ -5,9 +5,9 @@
 
   <testsuite name="loginTest"
     errors="1" failures="1" hostname="" id="" package="loginTest" skipped="0"
-    tests="1" time="3.015" timestamp="Mon, 04 Jun 2018 10:02:00 GMT">
+    tests="1" time="2.922" timestamp="Mon, 04 Jun 2018 10:09:10 GMT">
   
-    <testcase name="helloWorld" classname="loginTest" time="3.015" assertions="1">  <failure message="Testing if element &lt;HELLO WORLD&gt; contains text: &#34;undefined&#34;. Element could not be located.">    at Object.helloWorld (/Users/mattburgoyne/Desktop/Projects/final-project-websocket-livechat/spec/features/loginTest.js:6:13)
+    <testcase name="helloWorld" classname="loginTest" time="2.922" assertions="1">  <failure message="Testing if element &lt;HELLO WORLD&gt; contains text: &#34;undefined&#34;. Element could not be located.">    at Object.helloWorld (/Users/mattburgoyne/Desktop/Projects/final-project-websocket-livechat/spec/features/loginTest.js:6:13)
     at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
 
     

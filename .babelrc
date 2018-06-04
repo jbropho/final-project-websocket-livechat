@@ -1,6 +1,4 @@
 {
   "presets": ["env", "react"],
-  "test": {
-    "plugins": [ "istanbul" ]
-  }
+
 }
