@@ -3,6 +3,13 @@ function updateScroll(){
   if (element) element.scrollTop = element.scrollHeight;
 } 
 
+function findWebsocketAddress() {
+  return process.env.NODE_ENV === 'production' ?
+  'ws://finalprojectwebsocketlivechat.herokuapp.com/'
+  : 'http://localhost:8080/'
+};
+
 export {
-  updateScroll
+  updateScroll,
+  findWebsocketAddress
 };

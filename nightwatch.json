@@ -32,8 +32,7 @@
         "browserName": "chrome",
         "marionette": true
       }
-    },
-
+    },]
     "chrome" : {
       "desiredCapabilities": {
         "browserName": "chrome"

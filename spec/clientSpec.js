@@ -26,7 +26,7 @@ describe('Client', function() {
   describe('joinRoom', function() {
     it('socket emits welcome', function() {
       spyOn(socket, 'emit');
-      joinRoom();
+      joinRoom('clientJoin');
       expect(socket.emit).toHaveBeenCalled();
     })
   });

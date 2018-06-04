@@ -7,11 +7,11 @@ class MessageBoard extends Component{
   componentDidUpdate() {
     updateScroll();
   }
-  
+
   render(){
-    return( 
+    return(
       <div id="message-board">
-         {this.props.messageList.map(msg => <Message { ...msg } />) } 
+         {this.props.messageList.map(msg => <Message { ...msg } />) }
       </div>
     );
   }
