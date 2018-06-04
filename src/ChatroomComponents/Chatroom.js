@@ -9,7 +9,7 @@ import { listenForMessages } from '../client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [], roomlist: [] }
+    this.state = { messages: [], roomlist: [] };
     this.messageAdder = this.messageAdder.bind(this);
   }
 
@@ -34,5 +34,6 @@ class Chatroom extends Component {
     );
   }
 }
+
 
 export default Chatroom;
