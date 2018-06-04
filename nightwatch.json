@@ -28,11 +28,6 @@
         "enabled" : false,
         "path" : ""
       },
-      "desiredCapabilities": {
-        "browserName": "firefox",
-        "marionette": true
-      }
-    },
 
     "chrome" : {
       "desiredCapabilities": {
