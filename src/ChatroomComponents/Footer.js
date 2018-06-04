@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { handlePostClick } from '../helpers.js';
 import { sendMessage } from '../client.js';
 
 const messageReader = _ => document.getElementById('text-field').value;
@@ -16,14 +17,7 @@ const enterClick = document.addEventListener("keyup", function(event){
   }
 });
 
-const handlePostClick = name => {
-  var string = document.getElementById('text-field').value;
-  if(string) {
-  sendMessage({ author: name, content: messageReader() });
-  clearMessageField();
-  }
-  document.getElementById("text-field").focus();
-};
+
 
 class Footer extends Component{
   render(){
