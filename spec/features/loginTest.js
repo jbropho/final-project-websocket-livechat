@@ -1,5 +1,3 @@
-var chai = require('chai');
-var expect = chai.expect;
 this.loginInput = function(client) {
   client
     .url('http://localhost:8080/')
