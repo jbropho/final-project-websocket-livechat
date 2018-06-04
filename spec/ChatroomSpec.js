@@ -32,6 +32,27 @@ describe('Chatroom', function() {
       done();
      });
   });
+
+  describe('isInRoom', function() {
+    const chat = shallow(<Chatroom />);
+    var room;
+
+    beforeEach(function() {
+      room = chat.instance();
+    })
+
+    it('returns true when in a room', done => {
+      room.state = { rooms: [ 'theDonald'] };
+      expect(room.isInRoom('theDonald')).toBe(true);
+      done();
+    });
+
+    it('returns false when not in a room', done => {
+      room.state = { rooms: [ ] };
+      expect(room.isInRoom('theDonald')).toBe(false);
+      done();
+    });
+  });
   
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
