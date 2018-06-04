@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
+import Favicon from 'react-favicon';
 import { listenForMessages, subscribeToRoom } from '../client.js';
 
 
@@ -41,6 +42,7 @@ class Chatroom extends Component {
   render() {
     return(
       <div id="chatroom-container">
+        <Favicon url="https://i.imgur.com/zCkTxuA.png"/>
         <Header name={ this.props.name } />
         <Sidebar />
         <RoomList roomlist={ this.state.roomlist }/>
