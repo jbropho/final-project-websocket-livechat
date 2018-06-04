@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import Sidebar from "../src/Sidebar";
+import Sidebar from "../src/ChatroomComponents/Sidebar";
 
 describe('Sidebar', function() {
   var makeSidebar,

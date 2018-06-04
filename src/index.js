@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Chatroom from './Chatroom.js';
+import Chatroom from './ChatroomComponents/Chatroom.js';
 
 function startApp(name) {
   ReactDOM.render(

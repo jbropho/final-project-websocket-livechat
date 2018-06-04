@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { mount } from "enzyme";
-import MessageBoard from "../src/MessageBoard";
+import MessageBoard from "../src/ChatroomComponents/MessageBoard";
 
 describe('MessageBoard', function() {
   var makeMessageBoard,

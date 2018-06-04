@@ -1,8 +1,14 @@
 import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:8080');
+import { findWebsocketAddress } from './helpers.js';
+
+var socket = openSocket(findWebsocketAddress());
 
 function listenForMessages(cb) {
   socket.on('message', msg => cb(msg));
+}
+
+function joinRoom(roomName, name) {
+  socket.emit(roomName, name);
 }
 
 function sendMessage(msg) {
@@ -13,10 +19,10 @@ function killSocket(name) {
   socket.emit('wantToDie', name);
 };
 
-export { 
+export {
   sendMessage,
   listenForMessages,
   killSocket,
+  joinRoom,
   socket
 };
-

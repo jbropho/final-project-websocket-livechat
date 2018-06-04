@@ -1,4 +1,5 @@
 # Final Project WebSocket Livechat
+[![Build Status](https://travis-ci.org/jbropho/final-project-websocket-livechat.svg?branch=master)](https://travis-ci.org/jbropho/final-project-websocket-livechat)
 <div align="center"><img width="500" src="./doge.png" alt="MuchAgile"></div>
 
 A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
@@ -7,17 +8,15 @@ A live chat style app using WebSockets that is designed for programmers to colla
 
 ## Link to project board
 https://github.com/jbropho/final-project-websocket-livechat/projects/1
-## How to use
-
- 1. Clone this repo
- 2. Open index.html in the browser
-
-### To test
- * npm test
 
  ### To run
+ * clone repo
+ * npm run bundle
  * npm start
+ * visit localhost:8080
 
+ ### To test
+ * npm test
 
 # Our approach
  The main aim of our project was to learn and use some new technologies. We debated writing the backend of our app (how the client will integrate with the server) in Scala
@@ -30,8 +29,7 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
  Daily stand ups helped us to identify the short goals necessary in order for our MVP to take shape. Retros were not conducted daily as the workflow was very consistent throughout the project. However when it was clear discussion was needed, retros were used to evaluate the work that was done and to identify any improvements that could have been made along the way.
  While pair programming we made sure to regularly rotate our pairs to ensure everyone was clued into how each part of the app was functioning and to generate the opportunities for fresh ideas to be put forward.
-
-
-
+ 
+ After achieving the MVP we deployed it to Heroku. Through using Herokus Node environment variables we set up our code to be able to be developed and tested through a localhost while keeping our app deployed on Heroku.
 
 ### Documentation

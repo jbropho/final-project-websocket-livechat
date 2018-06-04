@@ -6,6 +6,7 @@ const express = require('express'),
 
 app.use(express.static('dist'));
 app.set('view engine', 'pug');
+app.set('views', __dirname + '/dist');
 
 app.use('/auth', auth);
 app.use('/chat', chat);
