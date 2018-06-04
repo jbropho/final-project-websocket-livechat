@@ -16,6 +16,7 @@ const handlePostClick = name => {
   if(string) {
   sendMessage({ author: name, content: messageReader() });
   clearMessageField();
+  document.getElementById("text-field").focus();
   }
 };
 
