@@ -13,7 +13,7 @@ io.sockets.on('connection', socket => {
 
     socket.on(roomName, message => {
       io.to(roomName).emit('message', message);
-    }) 
+    })
   });
 
   socket.on('wantToDie', name => {
