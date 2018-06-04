@@ -5,7 +5,7 @@ const messageReader = _ => document.getElementById('text-field').value;
 
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
-const handlePostClick = name => {
+const handlePostClick =  name => {
   sendMessage({ author: name, content: messageReader() });
   clearMessageField();
 }

@@ -4,7 +4,9 @@ window.onload = _ => listen();
 
 const listen = _ => {
   let signup = document.getElementById('signup');
+  let chat = document.getElementById('chat');
   signup && signup.addEventListener('click', onSignup);
+  chat && chat.addEventListener('click', onChat);
 }
 
 const submitUserDetails = ext => {
@@ -18,9 +20,18 @@ const submitUserDetails = ext => {
 
 async function onSignup(e) {
   await submitUserDetails('auth/signup').then(result => processResult(result)).catch(err => {console.log(err); e.preventDefault()})
-  redirect(HOME);
+  redirect(`${HOME}?username=${window.sessionStorage.name}`);
   e.preventDefault();
 };
+async function onChat(e) {
+  console.log('ENTERING');
+  const url = `${HOME}chat/verify`;
+  const headers = { 'x-access-token': token() }
+  const json = await sendRequest('GET', url, '', headers).then(res => JSON.parse(res)).catch(err => console.log('ERROR is ', err));
+  const location = json.location;
+  location && redirect(`${HOME}${location}`);
+  e.preventDefault();
+}
 
 const sendRequest = (method, url, params='', headers={}) => {
   return new Promise((res, rej) => {
@@ -44,3 +55,4 @@ const processResult = result => {
 
 const redirect = address => window.location.href = address;
 
+const token = _ => window.sessionStorage.token;

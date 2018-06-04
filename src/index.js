@@ -4,7 +4,7 @@ import Chatroom from './Chatroom.js';
 
 function startApp(name) {
   ReactDOM.render(
-    <Chatroom name={name}/>,
+    <Chatroom name={window.sessionStorage.name}/>,
     document.getElementById('root')
   );
 }
