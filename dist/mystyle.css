@@ -109,7 +109,8 @@ transition-duration: 0.2s;
   position: relative;
   top: 30px;
   left: 20px;
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 8px;
   color: rgb(252, 255, 233);
   background-color: rgba(82, 82, 82, 0.39);
   width: 90%;
@@ -129,7 +130,8 @@ transition-duration: 0.2s;
 }
 
 .content {
-  padding-top: 5px;
+  padding-top: 4px;
+  padding-bottom: 10px;
   font-style: italic;
 }
 
