@@ -7,7 +7,8 @@ const clearMessageField = _ => document.getElementById('text-field').value = '';
 
 
 const enterClick = document.addEventListener("keyup", function(event){
-  if (event.keyCode === 13) {
+  var userText = document.getElementById("text-field");
+  if (userText.value && event.keyCode === 13) {
     document.getElementById("send-msg").click();
   }
 });
