@@ -11,10 +11,19 @@ class Chatroom extends Component {
     super(props);
     this.state = { messages: [], roomlist: [] }
     this.messageAdder = this.messageAdder.bind(this);
+    this.joinRoom = this.joinRoom.bind(this);
   }
 
   componentDidMount() {
     listenForMessages(this.messageAdder);
+  }
+
+  isInRoom(room) {
+    return this.state.rooms.includes(room);
+  }
+
+  joinRoom(room) {
+    
   }
 
   messageAdder(msg){
