@@ -24,17 +24,19 @@ function enterClick() {
   document.addEventListener("keyup", function(event){
     var clickedButton = document.getElementById("send-msg");
     var userText = document.getElementById('text-field');
-    if (userText.value && event.keyCode === 13) {
-      clickedButton.click();
-      clickedButton.classList.add("active");
-      setTimeout(function() {
-        clickedButton.classList.remove("active");
-      }, 200);
-    }
-  });
+    didUserEnter();
+  }
+)}
 
+function didUserEnter(userText, clickedButton) {
+  if (userText.value && event.keyCode === 13) {
+    clickedButton.click();
+    clickedButton.classList.add("active");
+    setTimeout(function() {
+      clickedButton.classList.remove("active");
+    }, 200);
+  }
 }
-
 export {
   updateScroll,
   handlePostClick,
