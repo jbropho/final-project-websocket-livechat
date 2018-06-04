@@ -5,9 +5,14 @@ const messageReader = _ => document.getElementById('text-field').value;
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
 const enterClick = document.addEventListener("keyup", function(event){
+  var clickedButton = document.getElementById("send-msg");
   var userText = document.getElementById("text-field");
   if (userText.value && event.keyCode === 13) {
-    document.getElementById("send-msg").click();
+    clickedButton.click();
+    clickedButton.classList.add("active");
+    setTimeout(function() {
+      clickedButton.classList.remove("active");
+    }, 200);
   }
 });
 
@@ -17,6 +22,7 @@ const handlePostClick = name => {
   sendMessage({ author: name, content: messageReader() });
   clearMessageField();
   }
+  document.getElementById("text-field").focus();
 };
 
 class Footer extends Component{

@@ -80,7 +80,7 @@ border-left: 1px solid #54aefe;
 transition-duration: 0.2s;
 }
 
-.btn:hover {
+.btn:hover, .active {
   background-color: lightSteelBlue;
   color: white;
   font-size: x-large;
