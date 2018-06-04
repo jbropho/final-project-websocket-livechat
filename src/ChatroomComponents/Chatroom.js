@@ -9,11 +9,7 @@ import { listenForMessages } from '../client.js';
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-<<<<<<< HEAD:src/ChatroomComponents/Chatroom.js
-    this.state = { messages: [], roomlist: [] }
-=======
-    this.state = { messages: [] };
->>>>>>> styling-n:src/Chatroom.js
+    this.state = { messages: [], roomlist: [] };
     this.messageAdder = this.messageAdder.bind(this);
   }
 
