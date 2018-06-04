@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
-            failures="0"
-            tests="1">
+<testsuites errors="1"
+            failures="1"
+            tests="2">
 
   <testsuite name="loginTest"
-    errors="0" failures="0" hostname="" id="" package="loginTest" skipped="0"
-    tests="1" time="2.830" timestamp="Mon, 04 Jun 2018 10:31:00 GMT">
+    errors="1" failures="1" hostname="" id="" package="loginTest" skipped="0"
+    tests="2" time="5.835" timestamp="Mon, 04 Jun 2018 10:40:23 GMT">
   
-    <testcase name="fieldForInput" classname="loginTest" time="2.830" assertions="1">
+    <testcase name="fieldForInput" classname="loginTest" time="2.802" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="userHasWelcome" classname="loginTest" time="3.033" assertions="1">  <failure message="Testing if element &lt;Welcome jordan!&gt; contains text: &#34;undefined&#34;. Element could not be located.">    at Object.userHasWelcome (/Users/mattburgoyne/Desktop/Projects/final-project-websocket-livechat/spec/features/loginTest.js:15:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
 
     
     </testcase>
   
 
+  
+    <system-err>
+      ERROR: Unable to locate element: &#34;Welcome jordan!&#34; using: css selector
+    at F.command (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/api/assertions/containsText.js:46:21)
+    at F.module.exports.BaseAssertion._scheduleAssertion (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/assertion.js:87:17)
+    at F.module.exports.BaseAssertion._executeCommand (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/assertion.js:82:17)
+    at AssertionInstance.commandFn [as _commandFn] (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/assertion.js:180:21)
+    at AsyncTree.runCommand (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:154:30)
+    at AsyncTree.runChildNode (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:114:8)
+    at AsyncTree.walkDown (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:80:10)
+    at AsyncTree.walkUp (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:97:8)
+    at AsyncTree.walkDown (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:90:12)
+    at AsyncTree.traverse (/Users/mattburgoyne/.nvm/versions/node/v8.11.2/lib/node_modules/nightwatch/lib/core/queue.js:73:8)
+    </system-err>
   
 
   
