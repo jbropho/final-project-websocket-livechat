@@ -5,14 +5,6 @@ const app = require('./app'),
 
 io.sockets.on('connection', socket => {
 
-  // socket.on('main', msg => {
-  //   io.emit('main', msg);
-  // });
-
-  // socket.on('extra-room', msg => {
-  //   io.emit('extra-room', msg);
-  // });
-
   socket.on('joinRoom', roomName => {
     socket.join(roomName);
 
