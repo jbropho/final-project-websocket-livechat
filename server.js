@@ -1,11 +1,16 @@
 const app = require('./app'),
   http = require('http').Server(app),
   port = process.env.PORT || 8080,
+  bot = require('botbuilder'),
   io = require('socket.io').listen(http);
 
-io.sockets.on('connection', socket => {
 
+io.sockets.on('connection', socket => {
   socket.on('joinRoom', roomName => {
+    socket.on(name => {
+      socket.emit(roomName, name);
+      `${name} joined the room`;
+    });
     socket.join(roomName);
 
     socket.on(roomName, message => {
@@ -18,7 +23,7 @@ io.sockets.on('connection', socket => {
     socket.disconnect();
   });
 
-  socket.on('clientJoin', name => {
+  socket.on('joinRoom', name => {
     console.log(`${name} joined`);
   });
 });
