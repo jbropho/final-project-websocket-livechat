@@ -5,7 +5,13 @@ class RoomList extends Component{
   render(){
     return(
       <div className="chatroom-list">
-        {this.props.roomlist.map(room => <li>{room}</li>)}
+        <ul>
+    
+         { this.props.roomlist.map(room => 
+           <li onClick= { _ => this.props.joinRoom(room) } > {room} </li>
+         )}
+
+        </ul>
       </div>
     );
   }

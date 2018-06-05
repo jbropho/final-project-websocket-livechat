@@ -5,13 +5,13 @@ import Sidebar from './Sidebar';
 import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import Favicon from 'react-favicon';
-import { listenForMessages, subscribeToRoom } from '../client.js';
+import { listenForMessages, subscribeToRoom, sendMessage } from '../client.js';
 
 
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: { main: [] } , roomlist: ['main'], activeRooms: ['main'], currentRoom: 'main' };
+    this.state = { messages: { main: [] } , roomlist: ['main', 'extra-room'], activeRooms: ['main'], currentRoom: 'main' };
     this.messageAdder = this.messageAdder.bind(this);
     this.joinRoom = this.joinRoom.bind(this);
   }
@@ -30,6 +30,9 @@ class Chatroom extends Component {
       subscribeToRoom(room, this.props.name);
       this.state.messages[room] = [];
     }
+    this.setState({currentRoom : room});
+    listenForMessages(room, this.messageAdder);
+    console.log(this.state);
   }
 
   messageAdder(msg, room = 'main'){
@@ -45,9 +48,9 @@ class Chatroom extends Component {
         <Favicon url="https://i.imgur.com/zCkTxuA.png"/>
         <Header name={ this.props.name } />
         <Sidebar />
-        <RoomList roomlist={ this.state.roomlist }/>
+        <RoomList roomlist={ this.state.roomlist } joinRoom={ this.joinRoom } />
         <MessageBoard messageList={ this.state.messages[this.state.currentRoom] }/>
-        <Footer name={ this.props.name } />
+        <Footer name={ this.props.name }  />
       </div>
     );
   }
