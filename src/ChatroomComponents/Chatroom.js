@@ -29,8 +29,8 @@ class Chatroom extends Component {
     if (!this.isInRoom(room)) {
       this.state.activeRooms.push(room);
       subscribeToRoom(room, this.props.name);
-      this.state.messages[room] = [];
       listenForMessages(room, this.messageAdder);
+      this.state.messages[room] = [];
     }
     this.setState({currentRoom : room});
   }
