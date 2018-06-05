@@ -1,4 +1,5 @@
 const express = require('express'),
+  db = require('./db1'),
   app = express();
 
 app.use(express.static('dist'));

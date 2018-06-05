@@ -1,6 +1,7 @@
 const app = require('./app'),
   http = require('http').Server(app),
   port = process.env.PORT || 8080,
+  Message = require('./models/message'),
   io = require('socket.io').listen(http);
 
 io.sockets.on('connection', socket => {
@@ -10,6 +11,8 @@ io.sockets.on('connection', socket => {
 
     socket.on(roomName, message => {
       io.to(roomName).emit(roomName, message);
+      console.log('it is ', message);
+      Message.create({ username: message.author, roomName: roomName, content: message.content }, err => console.log(err));
     })
   });
 
