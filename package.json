@@ -2,10 +2,11 @@
   "name": "final-project-websocket-livechat",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "appStarter.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "NODE_ENV=test babel-node spec/run.js",
+    "start": "node appStarter.js",
+    "test": "node starter.js | NODE_ENV=test babel-node spec/run.js",
+    "posttest": "node stop.js",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development"
   },
@@ -39,6 +40,7 @@
     "react-dom": "^16.4.0",
     "selenium-server": "^3.12.0",
     "selenium-standalone": "^6.15.0",
+    "server-destroy": "^1.0.1",
     "socket.io": "^2.1.1",
     "webpack": "^4.10.1"
   },

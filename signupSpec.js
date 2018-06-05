@@ -2,25 +2,24 @@ const mongoose = require('mongoose'),
   request = require('request'),
   auth = require('../routes/auth'),
   User = require('../models/user'),
+  server = require('../server'),
   HOST = 'http://localhost',
   PORT = '8080',
   path = `${HOST}:${PORT}/auth/signup`,
   user = { username: 'someUser', password: 'Pass123' };
 
-
 beforeEach(done => {
   User.remove({}, err => {
   done();
   });
-  done();
 });
 
 describe('get signup', function () {
   it('should return 200 response code', function (done) {
     request.get(path, (err, res) => {
       expect(res.statusCode).toEqual(200);
+      done();
     });
-    done();
   });
 });
 
@@ -29,8 +28,8 @@ describe('signing up with valid username and password', function() {
     request.post(path, { form: user }, (err, res) => {
       if(err) console.log('ERROR ', err);
       expect(res.statusCode).toEqual(201);
+      done();
     });
-    done();
   });
 
   it('should have auth value set to true', function(done) {
@@ -38,8 +37,8 @@ describe('signing up with valid username and password', function() {
       body = JSON.parse(body);
       if(err) console.log(err);
       expect(body["auth"]).toBe(true);
+      done();
     });
-    done();
   });
 
   it('should have the name of the user', function(done) {
@@ -47,8 +46,8 @@ describe('signing up with valid username and password', function() {
     body = JSON.parse(body);
       if(err) console.log(err);
       expect(body["name"]).toEqual(user.username);
+      done();
     });
-    done();
   });
 });
 
@@ -58,7 +57,7 @@ describe('attempting to signup with a taken username', function() {
     request.post(path, { form: user }, (err, res, body) => {
       if(err) console.log(err);
       expect(res.statusCode).toEqual(500); 
+      done();
     });
-    done();
   });
 });
