@@ -29,7 +29,9 @@
   },
   "homepage": "https://github.com/jbropho/final-project-websocket-livechat#readme",
   "dependencies": {
+    "config": "^1.30.0",
     "express": "^4.16.3",
+    "mongoose": "^5.1.4",
     "pug": "^2.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
