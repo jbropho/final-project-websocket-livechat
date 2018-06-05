@@ -1,2 +1,4 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/websocket');
+const mongoose = require('mongoose'),
+  config = require('config');
+
+mongoose.connect(config.DBHost);

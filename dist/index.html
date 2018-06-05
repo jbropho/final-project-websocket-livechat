@@ -9,11 +9,14 @@
   <h1>HELLO WORLD</h1>
     <div id="root"></div>
       <div>
-        <form action="/chatroom">
-          username:<br>
-          <input type="text" name="username"><br>
-          <input type="submit" value="Submit">
+          <button id="chat">Chatroom</button>
+        <form action="/auth/login" method="GET">
+          <input type="submit" value="Login">
+        </form>
+        <form action="/auth/signup" method="GET">
+          <input type="submit" value="Signup">
         </form>
       </div>
+    <script type="text/javascript" src="./signup.js"></script>
   </body>
 </html>
