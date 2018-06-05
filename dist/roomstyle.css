@@ -1,0 +1,7 @@
+.extra-room {
+  position: fixed;
+  top: 100px;
+  bottom: 60px;
+  width: 15%;
+  background-color: rgb(100, 10, 100);
+}

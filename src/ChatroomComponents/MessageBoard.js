@@ -11,8 +11,8 @@ class MessageBoard extends Component{
 
   render(){
     return(
-      <div id="message-board">
-         {this.props.messageList.map(msg => <Message { ...msg } />).reverse() }
+      <div id="message-board" className={this.props.currentRoom}>
+        {this.props.messageList.map(msg => <Message { ...msg } />).reverse() }
       </div>
     );
   }

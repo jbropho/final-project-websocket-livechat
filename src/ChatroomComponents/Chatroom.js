@@ -49,7 +49,7 @@ class Chatroom extends Component {
         <Header name={ this.props.name } />
         <Sidebar />
         <RoomList roomlist={ this.state.roomlist } joinRoom={ this.joinRoom } />
-        <MessageBoard messageList={ this.state.messages[this.state.currentRoom] }/>
+        <MessageBoard messageList={ this.state.messages[this.state.currentRoom]} currentRoom={this.state.currentRoom}/>
         <Footer name={ this.props.name } roomName={ this.state.currentRoom }  />
       </div>
     );
