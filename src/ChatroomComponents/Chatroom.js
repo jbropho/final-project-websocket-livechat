@@ -17,6 +17,7 @@ class Chatroom extends Component {
   }
 
   componentDidMount() {
+    subscribeToRoom('main', this.props.name);
     listenForMessages('main', this.messageAdder);
   }
 
@@ -29,9 +30,9 @@ class Chatroom extends Component {
       this.state.activeRooms.push(room);
       subscribeToRoom(room, this.props.name);
       this.state.messages[room] = [];
+      listenForMessages(room, this.messageAdder);
     }
     this.setState({currentRoom : room});
-    listenForMessages(room, this.messageAdder);
   }
 
   messageAdder(msg, room = 'main'){

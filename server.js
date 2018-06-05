@@ -4,19 +4,20 @@ const app = require('./app'),
   io = require('socket.io').listen(http);
 
 io.sockets.on('connection', socket => {
-  socket.on('message', msg => {
-    io.emit('message', msg);
-  });
 
-  socket.on('main', msg => {
-    io.emit('main', msg);
-  });
+  // socket.on('main', msg => {
+  //   io.emit('main', msg);
+  // });
+
+  // socket.on('extra-room', msg => {
+  //   io.emit('extra-room', msg);
+  // });
 
   socket.on('joinRoom', roomName => {
     socket.join(roomName);
 
     socket.on(roomName, message => {
-      io.to(roomName).emit('message', message);
+      io.to(roomName).emit(roomName, message);
     })
   });
 
