@@ -14,9 +14,9 @@ describe('socket connection', function() {
       client.on('message', message => {
         expect(message).toEqual('Hello World');
         client.disconnect();
-        done();
       });
       client.emit('message', 'Hello World');
+      done();
     });
   });
 });
