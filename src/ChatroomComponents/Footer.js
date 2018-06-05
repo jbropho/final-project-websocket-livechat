@@ -10,7 +10,8 @@ class Footer extends Component{
         <div className="input">
           <input autoFocus="true" id="text-field" maxLength="142" placeholder="Enter message here..." onKeyPress={enterClick(this.props.name)}>
           </input>
-          <button className="btn" id="send-msg" onClick={ _ => handlePostClick(this.props.name) }> &#x21e8; </button>
+          <button className="btn" id="send-msg" 
+              onClick={ _ => handlePostClick(this.props.name, this.props.roomName) }> &#x21e8; </button>
         </div>
       </div>
     );
