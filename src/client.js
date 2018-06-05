@@ -4,15 +4,15 @@ import { findWebsocketAddress } from './helpers.js';
 var socket = openSocket(findWebsocketAddress());
 
 function listenForMessages(roomName, cb) {
-  socket.on(roomName, msg => cb(msg));
+  socket.on(roomName, msg => cb(msg, roomName));
 }
 
 function subscribeToRoom(roomName, name) {
-  socket.emit(roomName, name);
+  socket.emit('joinRoom', roomName);
 }
 
-function sendMessage(msg) {
-  socket.emit('main', msg);
+function sendMessage(roomName, msg) {
+  socket.emit(roomName, msg);
 }
 
 function killSocket(name) {
