@@ -1,4 +1,5 @@
 dist/bundle.js
 node_modules
 selenium-debug.log
-package.json
+package-lock.json
+.env

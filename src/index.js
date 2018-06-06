@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import Chatroom from './ChatroomComponents/Chatroom.js';
 
 
-function startApp(name) {
+function startApp() {
   ReactDOM.render(
-    <Chatroom name={name}/>,
+    <Chatroom name={window.sessionStorage.name}/>,
     document.getElementById('root')
 
   );
