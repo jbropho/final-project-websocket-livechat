@@ -6,9 +6,9 @@ class RoomList extends Component{
     return(
       <div className="chatroom-list">
         <ul>
-    
+
          { this.props.roomlist.map(room => 
-           <li onClick= { _ => this.props.joinRoom(room) } > {room} </li>
+           <li className={room === this.props.currentRoom ? room : null} onClick= { _ => this.props.joinRoom(room) } > {room} </li>
          )}
 
         </ul>
