@@ -1,0 +1,47 @@
+html {
+  background-color: grey;
+}
+
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background-color: rgb(77, 77, 77);
+}
+
+#auth-form {
+  position: relative;
+  left: 40%;
+  right: 40%;
+  width: 20%;
+  height: 450px;
+  top: 300px;
+  background-color: rgb(77, 77, 77);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#username-input {
+  color: white;
+}
+
+input[type="text"], textarea {
+  background-color : #d1d1d1; 
+}
+
+#password-input {
+  color: white;
+}
+
+#input-wrapper {
+  position: relative;
+  top: 40%;
+}
+
+#form-title {
+  position: relative;
+  left: 40%;
+  color: white;
+  font-size: 2em;
+}

@@ -1,11 +1,24 @@
 html
   head
     title Login
-    script
-      include ./signup.js
+    link(rel="stylesheet" href="../../stylereset.css")
+    link(rel="stylesheet" href="../../static.css")
+    script(src="../../signup.js")
+
   body
-    label(for='username') Username
-    input#username
-    label(for='password') Password
-    input#password(type='password', name='password')
-    button#login(type='submit') Login
+    div#header 
+    div#auth-form 
+     p#form-title Log in
+     div#input-wrapper
+        div#input-header
+        div#username-input
+          label(for='username') Username
+          br
+          input(id="username-field" type="text")
+        div#password-input
+          label(for='password') Password
+          br
+          input#password(type='password', name='password')
+        div#log-in-btn
+          button#login(type='submit') Login
+        div#input-footer
