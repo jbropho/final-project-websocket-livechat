@@ -43,7 +43,7 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
  Use of XP values such as communication and simplicity really helped our work flow and led us to achieving a MVP we were all really proud of.
  
  After achieving the MVP we deployed it to Heroku. Through using Herokus Node environment variables we set up our code to be able to be developed and tested through a localhost while keeping our app deployed on Heroku.
-We also added persistence of the messages in our chatroom by linking the app to MongoDB, which is being stored in Atlas in the cloud. 
+We also added persistence of the messages in our chatroom by linking the app to MongoDB, which is being stored in mLab in the cloud. 
 
 ### Documentation
 
