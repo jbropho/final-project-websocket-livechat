@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose'),
       auth = require('./../routes/auth'),
       User = require('./../models/user'),
