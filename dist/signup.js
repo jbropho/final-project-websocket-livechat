@@ -1,4 +1,12 @@
-const HOME = 'http://localhost:8080/';
+let HOME;
+if (process.env.NODE_ENV === 'production') {
+  HOME = 'https://finalprojectwebsocketlivechat.herokuapp.com/';
+
+}
+else {
+  HOME = 'http://localhost:8080';
+
+}
 
 window.onload = _ => listen();
 
@@ -18,7 +26,7 @@ const submitUserDetails = ext => {
   const params = `username=${username}&password=${password}`;
   const headers = { 'Content-type': 'application/x-www-form-urlencoded' }
   return sendRequest('POST', url, params, headers);
-}; 
+};
 
 async function onLogin(e) {
   await submitUserDetails('auth/login').then(result => processResult(result)).catch(err => { console.log(err); e.preventDefault()});
@@ -63,5 +71,3 @@ const processResult = result => {
 const redirect = address => window.location.href = address;
 
 const token = _ => window.sessionStorage.token;
-
-
