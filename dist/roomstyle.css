@@ -1,0 +1,17 @@
+.extra-room {
+    position: fixed;
+    top: 100px;
+    bottom: 60px;
+    width: 15%;
+    background-color: rgb(105, 105, 105);
+    font-weight: bold;
+  }
+.main {
+    position: fixed;
+    top: 100px;
+    bottom: 60px;
+    width: 15%;
+    background-color: rgb(105, 105, 105);
+    font-weight: bold;
+
+}

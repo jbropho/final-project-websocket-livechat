@@ -1,5 +1,5 @@
 {
-  "src_folders" : ["/spec/features"],
+  "src_folders" : ["./spec/features"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
@@ -10,9 +10,9 @@
     "start_process" : true,
     "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server-standalone-3.9.1.jar",
     "log_path" : "",
-    "port" : 8080,
+    "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "/Users/mattburgoyne/Applications",
+      "webdriver.chrome.driver" : "/Users/mattburgoyne/.nvm/versions/node/v8.11.2/bin/chromedriver",
       "webdriver.gecko.driver" : "",
       "webdriver.edge.driver" : ""
     }
@@ -21,7 +21,7 @@
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost",
-      "selenium_port"  : 8080,
+      "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,
       "screenshots" : {
