@@ -63,3 +63,5 @@ const processResult = result => {
 const redirect = address => window.location.href = address;
 
 const token = _ => window.sessionStorage.token;
+
+
