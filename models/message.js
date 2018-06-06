@@ -2,6 +2,7 @@ const mongoose = require('mongoose'),
   schema = mongoose.Schema;
 
 const MessageSchema = new schema({
+  created_at: { type: Date, default: new Date() },
   content: {
     type: String,
     required: true
