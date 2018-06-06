@@ -1,4 +1,7 @@
-const mongoose = require('mongoose'),
-  config = require('config');
+const mongoose = require('mongoose');
 
-mongoose.connect(config.DBHost);
+if (process.env.NODE_ENV === 'test') {
+  mongoose.connect(process.env.db_url_test);
+} else {
+  mongoose.connect(process.env.db_url);
+}
