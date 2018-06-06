@@ -1,13 +1,4 @@
-let HOME;
-if (process.env.NODE_ENV === 'production') {
-  HOME = 'https://finalprojectwebsocketlivechat.herokuapp.com/';
-
-}
-else {
-  HOME = 'http://localhost:8080';
-
-}
-
+const HOME = window.location.href.includes('herokuapp.com') ? 'https://finalprojectwebsocketlivechat.herokuapp.com' : 'http://localhost:8080';
 window.onload = _ => listen();
 
 const listen = _ => {
