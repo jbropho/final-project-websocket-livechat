@@ -1,2 +1,2 @@
-require('./starter');
+require('./httpServer').start();
 require('./socketServer');
