@@ -1,55 +1,35 @@
 {
-  "src_folders" : ["./examples/tests", "./examples/mocha", "./examples/unittests"],
-  "output_folder" : "./examples/reports",
-  "custom_commands_path" : "./examples/custom-commands",
-  "custom_assertions_path" : "./examples/custom-assertions",
-  "page_objects_path" : "./examples/pages",
-  "globals_path" : "./examples/globalsModule.js",
-  "disable_colors": false,
-  "test_workers" : false,
+  "src_folders" : ["./spec/features"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
 
-  "webdriver" : {
+
+  "selenium" : {
     "start_process": false,
     "host": "localhost",
-    "port": 4444
+    "port": 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "/Users/mattburgoyne/.nvm/versions/node/v8.11.2/bin/chromedriver",
+       "webdriver.gecko.driver" : "",
+       "webdriver.edge.driver" : ""
+     }
   },
 
   "test_settings" : {
     "default" : {
-      "webdriver": {
-        "server_path": "./bin/geckodriver-0.20",
-        "cli_args": [
-          "--log", "debug"
-        ]
-      },
-      "disable_colors": false,
-      "screenshots" : {
-        "enabled" : false,
-        "path" : ""
-      },
-      "request_timeout_options": {
-        "timeout": 60000,
-        "retry_attempts": 5
-      },
-      "filter": ["./examples/tests"],
-      "desiredCapabilities" : {
-        "browserName" : "firefox",
-        "acceptInsecureCerts" : true
-      }
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+       "selenium_host"  : "localhost",
+       "silent": true,
+       "screenshots" : {
+         "enabled" : false,
+         "path" : ""
     },
-
-    "chrome" : {
-      "webdriver": {
-        "port": 9515,
-        "default_path_prefix": "",
-        "server_path": "./bin/chromedriver-2.32",
-        "cli_args": [
-          "--verbose"
-        ]
-      },
       "desiredCapabilities" : {
         "browserName" : "chrome",
-        "loggingPrefs": {"driver": "INFO", "server": "OFF", "browser": "INFO"}
+        "marionette": true
       }
     },
 
@@ -59,21 +39,11 @@
       "exclude" : ""
     },
 
-    "mocha" : {
-      "webdriver" : {
-        "default_path_prefix": "",
-        "server_path": "./bin/chromedriver-2.32",
-        "cli_args": [
-          "--verbose"
-        ]
-      },
-      "desiredCapabilities" : {
-        "browserName" : "chrome"
-      },
-      "test_runner" : {
-        "type" : "mocha"
-      }
-    },
+    "chrome" : {
+         "desiredCapabilities": {
+           "browserName": "chrome"
+         }
+       },
 
     "selenium_server" : {
       "selenium" : {
