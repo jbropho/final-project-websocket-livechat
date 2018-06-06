@@ -7,7 +7,7 @@
     "start": "node appStarter.js",
     "testJasmine": "NODE_ENV=test babel-node spec/run.js",
     "testMocha": "NODE_ENV=test mocha --recursive --exit",
-    "test": "nyc npm run testJasmine && npm run testMocha; nightwatch spec/features",
+    "test": "nyc npm run testJasmine && npm run testMocha && nightwatch spec/features",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development",
     "postinstall": "webpack -p --config ./webpack.config.js --progress"
