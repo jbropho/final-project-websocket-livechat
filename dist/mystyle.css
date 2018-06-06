@@ -40,6 +40,13 @@
   flex-direction: column-reverse;
   padding-bottom: 2.4em;
 }
+.extra-room {
+    font-weight: bold;
+  }
+.main {
+    font-weight: bold;
+
+}
 
 .online_users {
   position: fixed;
