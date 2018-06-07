@@ -1,18 +1,19 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import MessageBoard from "../src/ChatroomComponents/MessageBoard";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import MessageBoard from '../src/ChatroomComponents/MessageBoard';
 
 describe('MessageBoard', function() {
   var makeMessageBoard,
-      messageBoard,
-      props;
+    messageBoard,
+    props;
+
   beforeEach(done => {
     props = { messageList: [ {}, {}, {}]};
     makeMessageBoard = _ => {
       messageBoard = mount(<MessageBoard {...props}/>);
       return messageBoard;
-    }
+    };
     done();
   });
 

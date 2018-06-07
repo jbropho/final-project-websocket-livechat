@@ -4,8 +4,6 @@ import { mount } from "enzyme";
 import { shallow } from 'enzyme';
 import Chatroom from "../src/ChatroomComponents/Chatroom";
 
-
-
 describe('Chatroom', function() {
   var makeChatroom,
     chatroom,
@@ -13,7 +11,6 @@ describe('Chatroom', function() {
 
   beforeEach(done => {
     props = {messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]};
-
 
     makeChatroom = _ => {
       chatroom = mount(<Chatroom {...props}/>)
@@ -30,7 +27,7 @@ describe('Chatroom', function() {
       room.messageAdder('another message');
       expect(room.state.messages.main.length).toBe(2);
       done();
-     });
+    });
   });
 
   describe('isInRoom', function() {
@@ -89,11 +86,13 @@ describe('Chatroom', function() {
     expect(result.length).toBeGreaterThan(0);
     done();
   });
+  
   it('starts with no messages', done => {
     const result = makeChatroom().find('.message');
     expect(result.length).toEqual(0);
     done();
-  })
+  });
+
   it('has a footer', done => {
     const result = makeChatroom().find('.footer');
     expect(result.length).toEqual(1);
@@ -120,6 +119,4 @@ describe('Chatroom', function() {
     expect(author.text()).toEqual('Xibit');
     done();
   });
-
-
 });

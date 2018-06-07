@@ -1,7 +1,7 @@
-import React, { Component} from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import Message from "../src/ChatroomComponents/Message";
+import React, { Component} from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import Message from '../src/ChatroomComponents/Message';
 
 var props,
   message,
@@ -14,14 +14,14 @@ beforeEach(done => {
     content: 'SPACES!! VIM!!!'
   };
   message = undefined;
-   makeMessage = _ => {
+  makeMessage = _ => {
     if(!message) {
       message = mount(
         <Message { ...props }/>
       );
     }
-  return message;
-  }
+    return message;
+  };
   done();
 });
 
@@ -38,7 +38,7 @@ describe('Rendering author', function() {
     const children = makeMessage().find('div').children();
     const author = children.find('.author').text();
     expect(author).toBe('Irbe');
-  done();
+    done();
   });
 });
 
@@ -47,6 +47,6 @@ describe('Rendering message', function() {
     const children = makeMessage().find('div').children();
     const content = children.find('.content').text();
     expect(content).toBe('SPACES!! VIM!!!');
-  done();
+    done();
   });
 });
