@@ -1,5 +1,6 @@
 # Final Project WebSocket Livechat
 [![Build Status](https://travis-ci.org/jbropho/final-project-websocket-livechat.svg?branch=master)](https://travis-ci.org/jbropho/final-project-websocket-livechat)
+[![Coverage Status](https://coveralls.io/repos/github/jbropho/final-project-websocket-livechat/badge.svg?branch=master)](https://coveralls.io/github/jbropho/final-project-websocket-livechat?branch=master)
 <div align="center"><img width="500" src="./doge.png" alt="MuchAgile"></div>
 
 A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
