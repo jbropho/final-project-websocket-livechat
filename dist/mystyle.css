@@ -7,6 +7,17 @@
   background-color: rgb(112, 112, 112);
 }
 
+#logo {
+  position: relative;
+  padding-left: 20px;
+  z-index: 1000;
+}
+
+#chatroom-welcome {
+  padding-left: 150px;
+  padding-top: 15px;
+}
+
 #chatroom-header {
   position: fixed;
   top: 0;
