@@ -28,6 +28,8 @@
   width: 15%;
   background-color: rgb(105, 105, 105);
   font-size: 20px;
+
+
 }
 
 #message-board {
@@ -39,7 +41,6 @@
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
-  font-color: #54aefe;
   padding-bottom: 2.4em;
 }
 .active-room {
@@ -53,6 +54,7 @@
   }
 li {
     max-width: inherit;
+    font-color: #54aefe;
 }
 
 
