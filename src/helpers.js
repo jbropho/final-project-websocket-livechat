@@ -1,7 +1,7 @@
 import { sendMessage } from './client.js'
 
-function updateScroll(element){
-  var element = document.getElementById(element);
+function updateScroll(elem){
+  var element = document.getElementById(elem);
   if (element) element.scrollTop = element.scrollHeight;
 }
 
