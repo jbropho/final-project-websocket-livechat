@@ -7,7 +7,6 @@ import RoomList from './RoomList';
 import Favicon from 'react-favicon';
 import { listenForMessages, subscribeToRoom, sendMessage } from '../client.js';
 
-
 class Chatroom extends Component {
   constructor(props) {
     super(props);

@@ -27,6 +27,7 @@ function enterClick() {
     didUserEnter(userText, clickedButton);
   }
 )}
+
 function checkIfMessageEmptyAndSend(name, message, roomName) {
   if(message) {
     sendMessage(roomName, { author: name, content: messageReader()});
@@ -43,6 +44,7 @@ function didUserEnter(userText, clickedButton) {
     }, 200);
   }
 }
+
 export {
   updateScroll,
   handlePostClick,

@@ -30,6 +30,7 @@ async function onSignup(e) {
   redirect(`${HOME}?username=${window.sessionStorage.name}`);
   e.preventDefault();
 };
+
 async function onChat(e) {
   const url = `${HOME}chat/verify`;
   const headers = { 'x-access-token': token() }
