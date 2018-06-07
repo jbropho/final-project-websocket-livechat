@@ -10,10 +10,10 @@ const http = require('./httpServer').http,
       Message
       .find({roomName: roomName}, 'username content')
       .sort({created_at: -1})
-      .limit(5)
+      .limit(20)
       .exec(function(err, result) {
        var prevMessages = result.map(function(message) {
-         return { content: message.content, 
+         return { content: message.content,
                   author: message.username
                 }
         })
@@ -22,7 +22,7 @@ const http = require('./httpServer').http,
 
       socket.on(roomName, message => {
         io.to(roomName).emit(roomName, message);
-        Message.create( { 
+        Message.create( {
           username: message.author,
           roomName: roomName,
           content: message.content
