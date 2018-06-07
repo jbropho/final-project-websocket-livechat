@@ -12,9 +12,9 @@ const http = require('./httpServer').http,
       .sort({created_at: -1})
       .limit(20)
       .exec(function(err, result) {
-       var prevMessages = result.map(function(message) {
-         return { content: message.content,
-                  author: message.username
+        var prevMessages = result.map(function(message) {
+          return { content: message.content,
+            author: message.username
                 }
         })
         socket.emit(roomName, prevMessages);
