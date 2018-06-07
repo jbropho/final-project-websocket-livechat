@@ -3,6 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/jbropho/final-project-websocket-livechat/badge.svg?branch=master)](https://coveralls.io/github/jbropho/final-project-websocket-livechat?branch=master)
 <div align="center"><img width="500" src="./doge.png" alt="MuchAgile"></div>
 
+https://finalprojectwebsocketlivechat.herokuapp.com/
+
 A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
 
  Made by [Eric North Bremicker](https://github.com/blarvin), [Irbe Krumina](https://github.com/irbekrm/), [Jordan Brooks](https://github.com/jbropho), and [Matthew Burgoyne](https://github.com/mattb20).
