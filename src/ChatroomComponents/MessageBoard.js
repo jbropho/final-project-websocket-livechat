@@ -5,7 +5,7 @@ import { updateScroll } from '../helpers';
 class MessageBoard extends Component{
 
   componentDidUpdate() {
-    updateScroll("message-board");
+    updateScroll('message-board');
   }
 
   render(){

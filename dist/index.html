@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>React Starter</title>
+    <link rel="stylesheet" href="../../stylesheet.css" type="text/css"/>
+    <link rel="stylesheet" href="../../static.css" type="text/css"/>
+    <title>chatroom</title>
   </head>
   <body>
-  <h1>HELLO WORLD</h1>
     <div id="root"></div>
-      <div>
-          <button id="chat">Chatroom</button>
+      <div id="header">
         <form action="/auth/login" method="GET">
           <input type="submit" value="Login">
         </form>
-        <label for="username"> Username </label>
-        <input type="text" id="username-field" name="username" />
-        <label for="password"> Password </label>
-        <input type="password" id="password" name="password" />
-        <label for="confirmPassword"> Confirm Password </label>
-        <input type="password" id="confirmPassword" name="confirmPassword" />
-        <input type="submit" id="signup" value="Signup" />
+      </div>
+        <div id="auth-form">
+        <div id="input-wrapper">
+          <p id="form-title">Sign up</p>
+          <div id="input-header">
+          <div id="username-input">
+            <label for="username"> Username </label>
+            <input type="text" id="username-field" name="username" />
+          </div>
+          <div id="password-input">
+            <label for="password"> Password </label>
+            <input type="password" id="password" name="password" />
+          </div>
+          <div id="password-repeat">
+            <label for="confirmPassword"> Confirm Password </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" />
+          </div>
+          <div id="log-in-btn">
+            <input type="submit" id="signup" value="Signup" />
+          </div>
+          <div id="input-footer">
+          </div>
+          </div>
+        </div>
       </div>
     <script type="text/javascript" src="./signup.js"></script>
   </body>

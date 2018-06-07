@@ -38,6 +38,13 @@
   bottom: 60px;
   width: 15%;
   background-color: rgb(105, 105, 105);
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  overflow: scroll;
+
+
+
 }
 
 #message-board {
@@ -51,13 +58,22 @@
   flex-direction: column-reverse;
   padding-bottom: 2.4em;
 }
-.extra-room {
+.active-room {
     font-weight: bold;
-  }
-.main {
-    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    overflow-wrap: break-word;
+    font-family: 'Lucida Sans';
 
+  }
+  li {
+    position: relative;
+    max-width: inherit;
+    color: #54aefe;
+    margin: 0 0 10px 0;
 }
+
 
 .online_users {
   position: fixed;
@@ -151,54 +167,4 @@ transition-duration: 0.2s;
   padding-top: 4px;
   padding-bottom: 10px;
   font-style: italic;
-}
-
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
