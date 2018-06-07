@@ -6,7 +6,7 @@ window.onload = async function() {
 
 const listen = _ => {
   let signup = document.getElementById('signup');
-  let login = document.getElementById('login');
+  let login = document.getElementById('login-btn');
   let chat = document.getElementById('chat');
   login && login.addEventListener('click', onLogin);
   signup && signup.addEventListener('click', onSignup);
@@ -15,7 +15,7 @@ const listen = _ => {
 
 const submitUserDetails = ext => {
   const url = `${HOME}${ext}`;
-  const username = document.getElementById('username').value;
+  const username = document.getElementById('username-field').value;
   const password = document.getElementById('password').value;
   const params = `username=${username}&password=${password}`;
   const headers = { 'Content-type': 'application/x-www-form-urlencoded' }
