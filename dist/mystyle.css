@@ -39,12 +39,12 @@
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
+  color: #54aefe;
   padding-bottom: 2.4em;
 }
 .active-room {
     font-weight: bold;
     font-size: 30px;
-    color: #54aefe;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
     overflow-wrap: break-word;
