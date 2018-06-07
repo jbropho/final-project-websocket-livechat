@@ -22,8 +22,9 @@ const submitUserDetails = ext => {
 
 async function onLogin(e) {
   await submitUserDetails('auth/login').then(result => processResult(result)).catch(err => { console.log(err); e.preventDefault()});
-  redirect(`${HOME}?username=${window.sessionStorage.name}`);
-  e.preventDefault();
+  window.sessionStorage.auth ?
+  await onChat() :
+  redirect(`${HOME}`);
 }
 
 async function onSignup(e) {
@@ -31,7 +32,6 @@ async function onSignup(e) {
   window.sessionStorage.auth ?
     await onChat() :
   redirect(`${HOME}`);
-  e.preventDefault();
 };
 
 async function onChat(e) {
