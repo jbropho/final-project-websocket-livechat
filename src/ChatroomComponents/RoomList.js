@@ -8,7 +8,7 @@ class RoomList extends Component{
         <ul>
 
           { this.props.roomlist.map(room =>
-            <li className={room === this.props.currentRoom ? 'active-room' : null} onClick= { _ => this.props.joinRoom(room) } > {room} {'\n'}</li>
+            <li className={room === this.props.currentRoom ? 'active-room' : null} onClick= { _ => this.props.joinRoom(room) } > {room} </li>
           )}
 
         </ul>
