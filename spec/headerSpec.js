@@ -1,13 +1,13 @@
-import React, { Component} from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import { shallow } from "enzyme";
-import Header from "../src/ChatroomComponents/Header";
+import React, { Component} from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
+import Header from '../src/ChatroomComponents/Header';
 
 describe('header', function() {
-   var makeHeader,
-       header,
-       props;
+  var makeHeader,
+    header,
+    props;
 
   beforeEach(done => {
     props = { title: 'World of Ping Pong', name: 'Jordan' };
@@ -16,6 +16,7 @@ describe('header', function() {
       header = mount(<Header {...props}/>);
       return header;
     }
+
     done();
   });
 
@@ -31,6 +32,7 @@ describe('header', function() {
     expect(content).toMatch(/World of Ping Pong/);
     done();
   });
+
   it('renders a welcome for a user', done => {
     const result = makeHeader().find('div');
     var welcome = result.find('.chatroom-welcome').text();

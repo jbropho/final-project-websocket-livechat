@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class RoomList extends Component{
 
-  render(){
+
+  render(){ 
     return(
       <div className="chatroom-list">
-        <ul>
+        <ul> d
+          { this.props.roomlist.map(room =>{
+            return <li className={room === this.props.currentRoom ? room : null} onClick= { _ => this.props.joinRoom(room) } > {room} </li>}
 
-         { this.props.roomlist.map(room =>
-           <li className={room === this.props.currentRoom ? room : null} onClick= { _ => this.props.joinRoom(room) } > {room} </li>
+
          )}
 
         </ul>
