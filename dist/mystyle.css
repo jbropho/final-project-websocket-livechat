@@ -39,7 +39,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
-  color: #54aefe;
+  font-color: #54aefe;
   padding-bottom: 2.4em;
 }
 .active-room {
