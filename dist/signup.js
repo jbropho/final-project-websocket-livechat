@@ -1,9 +1,12 @@
 const HOME = window.location.href.includes('herokuapp.com') ? 'https://finalprojectwebsocketlivechat.herokuapp.com/' : 'http://localhost:8080/';
-window.onload = _ => listen();
+window.onload = async function() {
+  listen();
+  await redirectToChat();
+}
 
 const listen = _ => {
   let signup = document.getElementById('signup');
-  let login = document.getElementById('login');
+  let login = document.getElementById('login-btn');
   let chat = document.getElementById('chat');
   login && login.addEventListener('click', onLogin);
   signup && signup.addEventListener('click', onSignup);
@@ -12,7 +15,7 @@ const listen = _ => {
 
 const submitUserDetails = ext => {
   const url = `${HOME}${ext}`;
-  const username = document.getElementById('username').value;
+  const username = document.getElementById('username-field').value;
   const password = document.getElementById('password').value;
   const params = `username=${username}&password=${password}`;
   const headers = { 'Content-type': 'application/x-www-form-urlencoded' }
@@ -30,13 +33,14 @@ async function onSignup(e) {
   redirect(`${HOME}?username=${window.sessionStorage.name}`);
   e.preventDefault();
 };
+
 async function onChat(e) {
   const url = `${HOME}chat/verify`;
   const headers = { 'x-access-token': token() }
   const json = await sendRequest('GET', url, '', headers).then(res => JSON.parse(res)).catch(err => console.log('ERROR is ', err));
   const location = json.location;
   location && redirect(`${HOME}${location}`);
-  e.preventDefault();
+  e && e.preventDefault();
 }
 
 const sendRequest = (method, url, params='', headers={}) => {
@@ -62,3 +66,9 @@ const processResult = result => {
 const redirect = address => window.location.href = address;
 
 const token = _ => window.sessionStorage.token;
+
+async function redirectToChat() {
+  if(window.sessionStorage.auth) {
+    await onChat();
+  }
+}

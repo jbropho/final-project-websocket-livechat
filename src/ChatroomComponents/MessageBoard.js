@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import Message from './Message';
 import { updateScroll } from '../helpers';
 
-
 class MessageBoard extends Component{
 
   componentDidUpdate() {
-    updateScroll();
+    updateScroll("message-board");
   }
 
   render(){
@@ -18,6 +17,5 @@ class MessageBoard extends Component{
   }
 
 }
-
 
 export default MessageBoard;

@@ -1,12 +1,12 @@
-import React, { Component} from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
-import Footer from "../src/ChatroomComponents/Footer";
+import React, { Component} from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import Footer from '../src/ChatroomComponents/Footer';
 
 describe('footer', function() {
-   var makeFooter,
-       footer,
-       props;
+  var makeFooter,
+    footer,
+    props;
 
   beforeEach(done => {
     props = { defaultText: 'Enter message here...' };
@@ -14,7 +14,7 @@ describe('footer', function() {
     makeFooter = _ => {
       footer = mount(<Footer {...props}/>);
       return footer;
-    }
+    };
     done();
   });
 
