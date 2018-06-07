@@ -1,6 +1,7 @@
 import { sendMessage } from './client.js'
-function updateScroll(){
-  var element = document.getElementById("message-board");
+
+function updateScroll(element){
+  var element = document.getElementById(element);
   if (element) element.scrollTop = element.scrollHeight;
 }
 
@@ -9,6 +10,7 @@ function findWebsocketAddress() {
     'ws://finalprojectwebsocketlivechat.herokuapp.com/'
     : 'http://localhost:8080/'
 }
+
 const messageReader = _ => document.getElementById('text-field').value;
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
