@@ -6,7 +6,7 @@ import { updateScroll } from '../helpers';
 class MessageBoard extends Component{
 
   componentDidUpdate() {
-    updateScroll();
+    updateScroll("message-board");
   }
 
   render(){
@@ -18,6 +18,5 @@ class MessageBoard extends Component{
   }
 
 }
-
 
 export default MessageBoard;
