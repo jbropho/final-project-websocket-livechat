@@ -39,7 +39,7 @@ class Chatroom extends Component {
     this.setState(prevState => {
      prevState.messages[room] = prevState.messages[room].concat(msg);
      return prevState;
-    })
+   })
   }
 
   render() {
