@@ -7,10 +7,8 @@ window.onload = async function() {
 const listen = _ => {
   let signup = document.getElementById('signup');
   let login = document.getElementById('login-btn');
-  let chat = document.getElementById('chat');
   login && login.addEventListener('click', onLogin);
   signup && signup.addEventListener('click', onSignup);
-  chat && chat.addEventListener('click', onChat);
 }
 
 const submitUserDetails = ext => {
@@ -30,7 +28,9 @@ async function onLogin(e) {
 
 async function onSignup(e) {
   await submitUserDetails('auth/signup').then(result => processResult(result)).catch(err => {console.log(err); e.preventDefault()})
-  redirect(`${HOME}?username=${window.sessionStorage.name}`);
+  window.sessionStorage.auth ?
+    await onChat() :
+  redirect(`${HOME}`);
   e.preventDefault();
 };
 
