@@ -71,7 +71,8 @@ var defaultRooms = [
   'Music',
   'Food',
   'Pizza',
-  'Gaming'
+  'Gaming',
+  'Booty Wine'
 
 ]
 
