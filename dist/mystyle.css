@@ -27,6 +27,9 @@
   bottom: 60px;
   width: 15%;
   background-color: rgb(105, 105, 105);
+  font-size: 20px;
+
+
 }
 
 #message-board {
@@ -40,13 +43,23 @@
   flex-direction: column-reverse;
   padding-bottom: 2.4em;
 }
-.extra-room {
+.active-room {
     font-weight: bold;
-  }
-.main {
-    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    overflow-wrap: break-word;
+    font-family: 'Lucida Sans';
 
+  }
+li {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    max-width: inherit;
+    color: #54aefe;
 }
+
 
 .online_users {
   position: fixed;

@@ -17,7 +17,7 @@ function sendMessage(roomName, msg) {
 
 function killSocket(name) {
   socket.emit('wantToDie', name);
-};
+}
 
 export {
   sendMessage,
