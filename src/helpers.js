@@ -41,11 +41,22 @@ function didUserEnter(userText, clickedButton) {
     }, 200);
   }
 }
+
+var defaultRooms = [
+  'main',
+  'ping-ping',
+  'march-2018',
+  'theDonald',
+  'irbe\'s vim playground',
+  'tech talk'
+]
+
 export {
   updateScroll,
   handlePostClick,
   enterClick,
   messageReader,
   clearMessageField,
-  findWebsocketAddress
+  findWebsocketAddress,
+  defaultRooms
 };
