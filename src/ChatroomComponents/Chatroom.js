@@ -6,11 +6,12 @@ import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import Favicon from 'react-favicon';
 import { listenForMessages, subscribeToRoom, sendMessage } from '../client.js';
+import { defaultRooms } from '../helpers.js'
 
 class Chatroom extends Component {
   constructor(props) {
     super(props);
-    this.state = { messages: { main: [] } , roomlist: ['main', 'extra-room'], activeRooms: ['main'], currentRoom: 'main' };
+    this.state = { messages: { main: [] } , roomlist: defaultRooms, activeRooms: ['main'], currentRoom: 'main' };
     this.messageAdder = this.messageAdder.bind(this);
     this.joinRoom = this.joinRoom.bind(this);
   }
