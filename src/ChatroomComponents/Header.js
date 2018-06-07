@@ -16,8 +16,8 @@ class Header extends Component {
   render() {
     return(
       <div id="chatroom-header">
-        <p className="chatroom-title"> { this.props.title } </p>
-        <p className="chatroom-welcome"> Welcome { this.props.name }! </p>
+        <p id="chatroom-title"> { this.props.title } </p>
+        <p id="chatroom-welcome"> Welcome { this.props.name }! </p>
       </div>
     );
   }
