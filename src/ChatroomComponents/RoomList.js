@@ -1,5 +1,25 @@
 import React, { Component } from "react";
 
+class SlideButton extends Component{
+
+  constructor(props) {
+   super(props);
+   this.slideLeft = this.slideLeft.bind(this);
+  }
+
+  slideLeft() {
+    document.getElementById("left-bar").classList.toggle("hidden-left");
+    document.getElementById("left-bar").classList.toggle("not-hidden-left");
+  }
+
+  render(){
+    return(
+      <div onClick={ this.slideLeft } className="btn" id="slide-btn"> &#x3008; </div>
+    );
+  }
+
+}
+
 class RoomList extends Component{
 
   render(){
@@ -16,5 +36,7 @@ class RoomList extends Component{
       </div>
     );
   }
+
 }
+
 export default RoomList;
