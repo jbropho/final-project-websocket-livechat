@@ -1,10 +1,12 @@
-html 
-  head 
+html
+  head
     title chatroom
-    link(rel="stylesheet", href="./mystyle.css")
+    link(rel="stylesheet", href="./roomstyle.css")
+    link(rel="stylesheet" href="./mystyle.css")
+
     script(src="./bundle.js")
-    
+    meta(http-equiv="Content-Security-Policy", content="upgrade-insecure-requests")
     body
-      div#root 
+      div#root
       script.
-        startApp("#{name}")
+        startApp()

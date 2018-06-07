@@ -1,0 +1,13 @@
+html
+  head
+    title Signup
+    script
+      include ./signup.js
+  body
+    label(for='username') Username
+    input#username
+    label(for='password') Password
+    input#password(type='password', name='password')
+    label(for='confirmPassword') Confirm Password
+    input(type='password' name='confirmPassword')
+    button#signup(type='submit') Signup 

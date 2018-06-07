@@ -23,7 +23,7 @@ describe('RoomList', function() {
   it('will list a room', done => {
     const result = makeroomList().find('.chatroom-list');
     const a_room_on_the_list = result.text();
-    expect(a_room_on_the_list).toBe('ThaShizznit');
+    expect(a_room_on_the_list).toMatch(/ThaShizznit/);
     done();
   });
 });

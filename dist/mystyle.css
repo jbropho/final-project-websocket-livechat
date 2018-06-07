@@ -24,6 +24,13 @@
 .hidden-left {
   background-color: lightblue;
 }
+.extra-room {
+    font-weight: bold;
+  }
+.main {
+    font-weight: bold;
+
+}
 
 
 .footer {

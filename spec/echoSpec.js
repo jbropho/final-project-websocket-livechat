@@ -1,9 +1,9 @@
 const socket = require('socket.io-client');
 
-var server;
+let server;
 
 beforeEach(done => {
-  server = require('../server');
+  server = require('../appStarter');
   done();
 });
 
@@ -14,9 +14,9 @@ describe('socket connection', function() {
       client.on('message', message => {
         expect(message).toEqual('Hello World');
         client.disconnect();
-        done();
       });
       client.emit('message', 'Hello World');
+      done();
     });
   });
 });

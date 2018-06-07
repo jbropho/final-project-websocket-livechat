@@ -2,12 +2,15 @@
   "name": "final-project-websocket-livechat",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "appStarter.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "nyc babel-node spec/run.js",
+    "start": "node appStarter.js",
+    "testJasmine": "NODE_ENV=test babel-node spec/run.js",
+    "testMocha": "NODE_ENV=test mocha --recursive --exit",
+    "test": "nyc npm run testJasmine && npm run testMocha",
     "lint": "./node_modules/.bin/eslint .",
-    "bundle": "npx webpack --mode development"
+    "bundle": "npx webpack --mode development",
+    "postinstall": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
@@ -28,12 +31,20 @@
   },
   "homepage": "https://github.com/jbropho/final-project-websocket-livechat#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "bootstrap-sass": "^3.3.7",
+    "config": "^1.30.0",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.2",
+    "mongoose": "^5.1.4",
     "pug": "^2.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "selenium-server": "^3.12.0",
     "selenium-standalone": "^6.15.0",
+    "server-destroy": "^1.0.1",
     "socket.io": "^2.1.1",
     "webpack": "^4.10.1"
   },
@@ -45,6 +56,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "bootbot": "^1.0.15",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -52,11 +65,13 @@
     "jasmine": "^3.1.0",
     "jasmine-enzyme": "^6.0.1",
     "jsdom": "^11.11.0",
+    "mocha": "^5.2.0",
     "mock-socket": "^7.1.0",
     "nightwatch": "^0.9.21",
     "nyc": "^12.0.2",
     "react-addons-test-utils": "^15.6.2",
     "react-favicon": "0.0.14",
+    "request": "^2.87.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "webpack-cli": "^2.1.4"
   }

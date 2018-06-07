@@ -12,9 +12,9 @@ function findWebsocketAddress() {
 const messageReader = _ => document.getElementById('text-field').value;
 const clearMessageField = _ => document.getElementById('text-field').value = '';
 
-function handlePostClick(name) {
+function handlePostClick(name, roomName) {
   var message = messageReader();
-  checkIfMessageEmptyAndSend(name, message);
+  checkIfMessageEmptyAndSend(name, message, roomName);
   document.getElementById("text-field").focus();
 }
 
@@ -25,9 +25,9 @@ function enterClick() {
     didUserEnter(userText, clickedButton);
   }
 )}
-function checkIfMessageEmptyAndSend(name, message) {
+function checkIfMessageEmptyAndSend(name, message, roomName) {
   if(message) {
-    sendMessage({ author: name, content: messageReader() });
+    sendMessage(roomName, { author: name, content: messageReader()});
     clearMessageField();
   }
 }

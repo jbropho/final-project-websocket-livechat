@@ -70,12 +70,13 @@ describe('Chatroom', function() {
     });
 
     it('does not add a room that is already present', done => {
+      spyOn(room, 'setState').and.returnValue(true);
       room.state = { activeRooms: ['ping-pong'] };
       room.joinRoom('ping-pong');
       expect(room.state.activeRooms.length).toBe(1);
       done();
-    })
-  })
+    });
+  });
 
   it('always renders a div', done => {
     const result = makeChatroom().find('#chatroom-container');
