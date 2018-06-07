@@ -13,9 +13,13 @@
         <form action="/auth/login" method="GET">
           <input type="submit" value="Login">
         </form>
-        <form action="/auth/signup" method="GET">
-          <input type="submit" value="Signup">
-        </form>
+        <label for="username"> Username </label>
+        <input type="text" id="username" name="username" />
+        <label for="password"> Password </label>
+        <input type="password" id="password" name="password" />
+        <label for="confirmPassword"> Confirm Password </label>
+        <input type="password" id="confirmPassword" name="confirmPassword" />
+        <input type="submit" id="signup" value="Signup" />
       </div>
     <script type="text/javascript" src="./signup.js"></script>
   </body>
