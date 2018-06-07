@@ -8,7 +8,6 @@
     "testJasmine": "NODE_ENV=test nyc babel-node spec/run.js",
     "testMocha": "NODE_ENV=test nyc mocha --recursive --exit",
     "test": "npm run testJasmine && run testMocha && nyc mocha --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development",
     "postinstall": "webpack -p --config ./webpack.config.js --progress"
