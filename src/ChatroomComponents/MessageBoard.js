@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Message from './Message';
 import { updateScroll } from '../helpers';
 
-
 class MessageBoard extends Component{
 
   componentDidUpdate() {
