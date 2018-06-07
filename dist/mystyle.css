@@ -48,9 +48,11 @@
     padding-bottom: 1.5em;
     padding-top: 1.5em;
     font-family: 'Lucida Sans';
-    max-width: 2.4px;
 
   }
+li {
+    max-width: inherit;
+}
 
 
 .online_users {
