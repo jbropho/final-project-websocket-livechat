@@ -5,7 +5,7 @@ this.helloWorld = function(client) {
     .saveScreenshot('./screenshots')
     .assert.containsText('HELLO WORLD')
     .end();
-  
+
 this.loginTest = function(browser) {
   browser
     .url('http://localhost:8080/');
