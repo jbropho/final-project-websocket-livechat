@@ -47,6 +47,7 @@
     color: #54aefe;
     padding-bottom: 1.5em;
     padding-top: 1.5em;
+    overflow-wrap: break-word;
     font-family: 'Lucida Sans';
 
   }
