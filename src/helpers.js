@@ -46,12 +46,34 @@ function didUserEnter(userText, clickedButton) {
 }
 
 var defaultRooms = [
-  'main',
-  'ping-ping',
-  'march-2018',
+  'Main',
+  'Ping-pong',
+  'March-2018',
   'theDonald',
-  'irbe\'s vim playground',
-  'tech talk'
+  'irbe\'s vim land',
+  'Tech talk',
+  'Pub talk',
+  'TDD',
+  'Dark web',
+  'NodeJS',
+  'Hackathons',
+  'Honeybadger roams',
+  'Junior spesh',
+  'Aerobics room',
+  'Activities',
+  'Books',
+  'News',
+  '4chan',
+  'Sports',
+  'Ice Hockey',
+  'Politics',
+  'Culture',
+  'Music',
+  'Food',
+  'Pizza',
+  'Gaming',
+  'Booty Wine'
+
 ]
 
 export {
