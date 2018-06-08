@@ -42,9 +42,6 @@
   padding-top: 20px;
   padding-left: 10px;
   overflow: scroll;
-
-
-
 }
 
 #message-board {
@@ -65,7 +62,6 @@
     padding-top: 0.5em;
     overflow-wrap: break-word;
     font-family: 'Lucida Sans';
-
   }
   li {
     position: relative;
@@ -74,7 +70,6 @@
     font-family: 'Lucida Sans';
     margin: 0 0 10px 0;
 }
-
 
 .online_users {
   position: fixed;
