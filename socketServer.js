@@ -17,7 +17,7 @@ io.sockets.on('connection', socket => {
             author: message.username
                 }
         })
-        socket.emit(roomName, prevMessages);
+        socket.emit(roomName, prevMessages.reverse());
       });
 
       socket.on(roomName, message => {
