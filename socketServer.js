@@ -2,10 +2,10 @@ const http = require('./httpServer').http,
   io = require('socket.io').listen(http),
   Message = require('./models/message')
 
-  io.sockets.on('connection', socket => {
+io.sockets.on('connection', socket => {
 
-    socket.on('joinRoom', roomName => {
-      socket.join(roomName);
+  socket.on('joinRoom', roomName => {
+    socket.join(roomName);
 
       Message
       .find({roomName: roomName}, 'username content')
