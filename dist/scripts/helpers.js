@@ -42,3 +42,14 @@ const redirect = address => window.location.href = address;
 
 // Get the authorisation token from the session
 const token = _ => window.sessionStorage.token;
+
+// compare values of password fields
+const isEqual = _ => document.getElementById('password').value ===
+document.getElementById('confirmPassword').value;
+
+// check if string has 6 unique chars
+const hasSixUniqueChars = _ => {
+const pswd = document.getElementById('password').value;
+return(new Set(pswd.split(''))).size >= 6; 
+}
+

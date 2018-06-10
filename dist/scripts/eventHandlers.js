@@ -9,6 +9,8 @@ async function onLogin(e) {
 
 // Event handler for clicking on signup button
 async function onSignup(e) {
+  if(!isEqual()) return;
+  if(!hasSixUniqueChars()) return;
   await submitUserDetails('auth/signup').then(
   result => processResult(result)).catch(err => {
   console.log(err); e.preventDefault()})
