@@ -42,3 +42,7 @@ const redirect = address => window.location.href = address;
 
 // Get the authorisation token from the session
 const token = _ => window.sessionStorage.token;
+
+// compare values of password fields
+const isEqual = _ => document.getElementById('password').value ===
+document.getElementById('confirmPassword').value;
