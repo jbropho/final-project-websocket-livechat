@@ -1,9 +1,9 @@
 # Final Project WebSocket Livechat
 [![Build Status](https://travis-ci.org/jbropho/final-project-websocket-livechat.svg?branch=master)](https://travis-ci.org/jbropho/final-project-websocket-livechat)
 
-## A chat app using WebSockets and React for real time messaging. 
+## A chat app using WebSockets and React for real time messaging.
 
-### Visit our live version! 
+### Visit our live version!
 https://finalprojectwebsocketlivechat.herokuapp.com/
 
 
@@ -22,11 +22,11 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
  ### To test
  * npm test
-  
+
  ### To feature test
  * Ensure you have chromedriver downloaded and point nightwatch to the installation in the nightwatch.json file
- * In three different terminal windows, run selenium-standalone start, in the other run npm start, and in the final one npm run featuretest to run the feature tests 
- 
+ * In three different terminal windows, run selenium-standalone start, in the other run npm start, and in the final one npm run featuretest to run the feature tests
+
 # Our approach
  The main aim of our project was to learn and use some new technologies. We debated writing the backend of our app (how the client will integrate with the server) in Scala
  which would be a new language for each of us to learn, however due to time constraints we decided to write the backend using node first, and then rewrite it in Scala.
@@ -38,17 +38,20 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
  Daily stand ups helped us to identify the short goals necessary in order for our MVP to take shape. Retros were not conducted daily as the workflow was very consistent throughout the project. However when it was clear discussion was needed, retros were used to evaluate the work that was done and to identify any improvements that could have been made along the way.
  While pair programming we made sure to regularly rotate our pairs to ensure everyone was clued into how each part of the app was functioning and to generate the opportunities for fresh ideas to be put forward.
- 
- If daily objectives were met with time to spare, a group stand up meeting was held to discuss the direction we might potentially take the app. 
- 
+
+ If daily objectives were met with time to spare, a group stand up meeting was held to discuss the direction we might potentially take the app.
+
  Use of XP values such as communication and simplicity really helped our work flow and led us to achieving a MVP we were all really proud of.
- 
+
  After achieving the MVP we deployed it to Heroku. Through using Herokus Node environment variables we set up our code to be able to be developed and tested through a localhost while keeping our app deployed on Heroku.
-We also added persistence of the messages in our chatroom by linking the app to MongoDB, which is being stored in mLab in the cloud. 
+We also added persistence of the messages in our chatroom by linking the app to MongoDB, which is being stored in mLab in the cloud.
 
 ### Documentation
 
 ### Screenshots
+### Landing page
+![Alt text](./screenshots/landingpage.png?raw=true "Landing page")
+
 
 ### Further features to be added:
 - Print a message in chat when a user joins and leaves the room
