@@ -1,22 +1,21 @@
 # Final Project WebSocket Livechat
 [![Build Status](https://travis-ci.org/jbropho/final-project-websocket-livechat.svg?branch=master)](https://travis-ci.org/jbropho/final-project-websocket-livechat)
-[![Coverage Status](https://coveralls.io/repos/github/jbropho/final-project-websocket-livechat/badge.svg?branch=master)](https://coveralls.io/github/jbropho/final-project-websocket-livechat?branch=master)
-<div align="center"><img width="500" src="./doge.png" alt="MuchAgile"></div>
 
+## A chat app using WebSockets and React for real time messaging. 
+
+### Visit our live version! 
 https://finalprojectwebsocketlivechat.herokuapp.com/
 
-A live chat style app using WebSockets that is designed for programmers to collaborate on code/pair program
+
 
  Made by [Eric North Bremicker](https://github.com/blarvin), [Irbe Krumina](https://github.com/irbekrm/), [Jordan Brooks](https://github.com/jbropho), and [Matthew Burgoyne](https://github.com/mattb20).
 
 ## Link to project board
 https://github.com/jbropho/final-project-websocket-livechat/projects/1
 
-### To unit test
- * npm test
-
  ### To run
  * clone repo
+ * npm install
  * npm run bundle
  * npm start
  * visit localhost:8080
@@ -28,7 +27,6 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
  * Ensure you have chromedriver downloaded and point nightwatch to the installation in the nightwatch.json file
  * In three different terminal windows, run selenium-standalone start, in the other run npm start, and in the final one npm run featuretest to run the feature tests 
  
-
 # Our approach
  The main aim of our project was to learn and use some new technologies. We debated writing the backend of our app (how the client will integrate with the server) in Scala
  which would be a new language for each of us to learn, however due to time constraints we decided to write the backend using node first, and then rewrite it in Scala.
@@ -51,7 +49,6 @@ We also added persistence of the messages in our chatroom by linking the app to 
 ### Documentation
 
 ### Screenshots
-
 
 ### Further features to be added:
 - Print a message in chat when a user joins and leaves the room
