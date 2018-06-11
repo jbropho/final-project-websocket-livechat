@@ -7,7 +7,7 @@
     "start": "node appStarter.js",
     "testJasmine": "NODE_ENV=test babel-node spec/run.js",
     "testMocha": "NODE_ENV=test mocha --recursive --exit",
-    "test": "nyc npm run testJasmine && npm run testMocha",
+    "test": "nyc npm run testJasmine && npm run testMocha && nightwatch spec/features",
     "lint": "./node_modules/.bin/eslint .",
     "bundle": "npx webpack --mode development",
     "postinstall": "webpack -p --config ./webpack.config.js --progress"
@@ -43,7 +43,6 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "selenium-server": "^3.12.0",
-    "selenium-standalone": "^6.15.0",
     "server-destroy": "^1.0.1",
     "socket.io": "^2.1.1",
     "webpack": "^4.10.1"
@@ -72,6 +71,7 @@
     "react-addons-test-utils": "^15.6.2",
     "react-favicon": "0.0.14",
     "request": "^2.87.0",
+    "selenium-standalone": "^6.15.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "webpack-cli": "^2.1.4"
   }

@@ -1,43 +1,65 @@
 {
-  "src_folders" : ["/spec/features"],
+  "src_folders" : ["./spec/features"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
   "page_objects_path" : "",
-  "globals_path" : "",
+
 
   "selenium" : {
-    "start_process" : true,
-    "server_path" : "./node_modules/selenium-standalone/.selenium/selenium-server-standalone-3.9.1.jar",
-    "log_path" : "",
-    "port" : 8080,
+    "start_process": false,
+    "host": "localhost",
+    "port": 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "/Users/mattburgoyne/Applications",
-      "webdriver.gecko.driver" : "",
-      "webdriver.edge.driver" : ""
-    }
+      "webdriver.chrome.driver" : "/Users/mattburgoyne/.nvm/versions/node/v8.11.2/bin/chromedriver",
+       "webdriver.gecko.driver" : "",
+       "webdriver.edge.driver" : ""
+     }
   },
 
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost",
-      "selenium_port"  : 8080,
-      "selenium_host"  : "localhost",
-      "silent": true,
-      "screenshots" : {
-        "enabled" : false,
-        "path" : ""
-      },
-
-    "chrome" : {
-      "desiredCapabilities": {
-        "browserName": "chrome"
+      "selenium_port"  : 4444,
+       "selenium_host"  : "localhost",
+       "silent": true,
+       "screenshots" : {
+         "enabled" : false,
+         "path" : ""
+    },
+      "desiredCapabilities" : {
+        "browserName" : "chrome",
+        "marionette": true
       }
     },
 
-    "edge" : {
-      "desiredCapabilities": {
-        "browserName": "MicrosoftEdge"
+    "unit_tests" : {
+      "unit_tests_mode" : true,
+      "filter" : "./examples/unittests/*",
+      "exclude" : ""
+    },
+
+    "chrome" : {
+         "desiredCapabilities": {
+           "browserName": "chrome"
+         }
+       },
+
+    "selenium_server" : {
+      "selenium" : {
+        "start_process": true,
+        "host": "localhost",
+        "port": 4444,
+        "server_path": "./bin/selenium-server-standalone-3.10.0.jar",
+        "cli_args": {
+          "webdriver.gecko.driver": "./bin/geckodriver-0.19",
+          "webdriver.chrome.driver": "./bin/chromedriver-2.32"
+        }
+      },
+
+      "desiredCapabilities" : {
+        "browserName" : "firefox",
+        "acceptSslCerts": true
       }
     }
   }
