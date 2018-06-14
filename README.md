@@ -46,6 +46,11 @@ https://github.com/jbropho/final-project-websocket-livechat/projects/1
  After achieving the MVP we deployed it to Heroku. Through using Herokus Node environment variables we set up our code to be able to be developed and tested through a localhost while keeping our app deployed on Heroku.
 We also added persistence of the messages in our chatroom by linking the app to MongoDB, which is being stored in mLab in the cloud.
 
+### Learnings
+
+During the project we ran into issues with testing as we were initialising connections in multiple places. We learned to be much more
+careful and explicit with how connections (http and websockets) were opened in our app. We decided it made sense to configure our connections without opening them, and have a specific place in our application where connections were intialised. This made reasoning about our application much easier and reduced the potential for conflicts when testing.
+
 ### Documentation
 
 ### Screenshots
