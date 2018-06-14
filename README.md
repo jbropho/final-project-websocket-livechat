@@ -48,7 +48,7 @@ We also added persistence of the messages in our chatroom by linking the app to 
 
 ### Learnings
 
-During the project we ran into issue with testing as we were initialising connections in multiple places. We learned to be much more
+During the project we ran into issues with testing as we were initialising connections in multiple places. We learned to be much more
 careful and explicit with how connections (http and websockets) were opened in our app. We decided it made sense to configure our connections without opening them, and have a specific place in our application where connections were intialised. This made reasoning about our application much easier and reduced the potential for conflicts when testing.
 
 ### Documentation
