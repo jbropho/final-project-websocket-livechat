@@ -1,26 +1,30 @@
-06:39:24.800 INFO - Selenium build info: version: '3.9.1', revision: '63f7b50'
-06:39:24.801 INFO - Launching a standalone Selenium Server on port 4444
-2018-06-22 06:39:25.016:INFO::main: Logging initialized @604ms to org.seleniumhq.jetty9.util.log.StdErrLog
-2018-06-22 06:39:25.169:INFO:osjs.Server:main: jetty-9.4.7.v20170914, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
-2018-06-22 06:39:25.200:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@21e360a{/,null,STARTING} has uncovered http methods for path: /
-2018-06-22 06:39:25.206:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@21e360a{/,null,AVAILABLE}
-2018-06-22 06:39:25.238:INFO:osjs.AbstractConnector:main: Started ServerConnector@12bb9576{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2018-06-22 06:39:25.239:INFO:osjs.Server:main: Started @827ms
-06:39:25.240 INFO - Selenium Server is up and running on port 4444
-2018-06-22 06:39:25.435:INFO:osjshC.ROOT:qtp1803669141-14: org.openqa.selenium.remote.server.WebDriverServlet-55b53d44: Initialising WebDriverServlet
-06:39:25.501 INFO - Found handler: org.openqa.selenium.remote.server.commandhandler.BeginSession@714b1695
-06:39:25.506 INFO - /session: Executing POST on /session (handler: BeginSession)
-06:39:25.586 INFO - Capabilities are: Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test}
-06:39:25.588 INFO - Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test} matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
-1529645965647	geckodriver	INFO	geckodriver 0.21.0
-1529645965657	geckodriver	INFO	Listening on 127.0.0.1:35754
-1529645966184	mozrunner::runner	INFO	Running command: "/Users/user/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/jh/jw_fjdfn5_b_p7wwd5lqxhz00000gn/T/rust_mozprofile.sM9PY615X6Hz"
-1529645967594	Marionette	INFO	Enabled via --marionette
-2018-06-22 06:39:29.224 plugin-container[19247:2911887] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa537, name = 'com.apple.tsm.portname'
+06:59:42.442 INFO - Selenium build info: version: '3.9.1', revision: '63f7b50'
+06:59:42.443 INFO - Launching a standalone Selenium Server on port 4444
+2018-06-22 06:59:42.664:INFO::main: Logging initialized @615ms to org.seleniumhq.jetty9.util.log.StdErrLog
+2018-06-22 06:59:42.801:INFO:osjs.Server:main: jetty-9.4.7.v20170914, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-06-22 06:59:42.829:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@21e360a{/,null,STARTING} has uncovered http methods for path: /
+2018-06-22 06:59:42.834:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@21e360a{/,null,AVAILABLE}
+2018-06-22 06:59:42.862:INFO:osjs.AbstractConnector:main: Started ServerConnector@11392934{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2018-06-22 06:59:42.863:INFO:osjs.Server:main: Started @814ms
+06:59:42.864 INFO - Selenium Server is up and running on port 4444
+2018-06-22 06:59:43.067:INFO:osjshC.ROOT:qtp1803669141-14: org.openqa.selenium.remote.server.WebDriverServlet-55b53d44: Initialising WebDriverServlet
+06:59:43.137 INFO - Found handler: org.openqa.selenium.remote.server.commandhandler.BeginSession@2744e13d
+06:59:43.142 INFO - /session: Executing POST on /session (handler: BeginSession)
+06:59:43.219 INFO - Capabilities are: Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test}
+06:59:43.221 INFO - Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test} matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1529647183275	geckodriver	INFO	geckodriver 0.21.0
+1529647183286	geckodriver	INFO	Listening on 127.0.0.1:28501
+1529647183604	mozrunner::runner	INFO	Running command: "/Users/user/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/jh/jw_fjdfn5_b_p7wwd5lqxhz00000gn/T/rust_mozprofile.lFNWaKbiGoEP"
+1529647184310	Marionette	INFO	Enabled via --marionette
+2018-06-22 06:59:45.476 plugin-container[19376:2930184] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa137, name = 'com.apple.tsm.portname'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-1529645970024	Marionette	INFO	Listening on port 52496
-06:39:30.257 INFO - Detected dialect: W3C
-2018-06-22 06:39:30.273 plugin-container[19248:2911988] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9c3f, name = 'com.apple.tsm.portname'
+1529647185862	Marionette	INFO	Listening on port 53000
+06:59:46.278 INFO - Detected dialect: W3C
+06:59:46.442 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
+06:59:46.443 INFO - Handler thread for session d327588a-18f1-2743-a0a0-438cf57ea091 (firefox): Executing POST on /session/d327588a-18f1-2743-a0a0-438cf57ea091/url (handler: ServicedSession)
+2018-06-22 06:59:46.636 plugin-container[19377:2930263] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9d37, name = 'com.apple.tsm.portname'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-06:39:30.361 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@4a90c845
-06:39:30.362 INFO - Handler thread for session f61d0314-d17e-d64a-b02e-a410903b90c4 (firefox): Executing POST on /session/f61d0314-d17e-d64a-b02e-a410903b90c4/url (handler: ServicedSession)
+06:59:46.712 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
+06:59:46.713 INFO - Handler thread for session d327588a-18f1-2743-a0a0-438cf57ea091 (firefox): Executing POST on /session/d327588a-18f1-2743-a0a0-438cf57ea091/elements (handler: ServicedSession)
+06:59:46.747 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
+06:59:46.747 INFO - Handler thread for session d327588a-18f1-2743-a0a0-438cf57ea091 (firefox): Executing POST on /session/d327588a-18f1-2743-a0a0-438cf57ea091/url (handler: ServicedSession)
