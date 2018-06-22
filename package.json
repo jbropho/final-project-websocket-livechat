@@ -37,6 +37,7 @@
     "config": "^1.30.0",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "geckodriver": "^1.11.0",
     "jsonwebtoken": "^8.2.2",
     "mongoose": "^5.1.4",
     "pug": "^2.0.3",
