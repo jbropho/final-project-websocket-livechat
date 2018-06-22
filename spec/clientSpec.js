@@ -24,7 +24,7 @@ describe('Client', function() {
       expect(socket.on).toHaveBeenCalled();
     });
   });
-  
+
   describe('subscribeToRoom', function() {
     it('socket emits welcome', function() {
       spyOn(socket, 'emit');
