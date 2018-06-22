@@ -1,32 +1,46 @@
-15:34:57.347 INFO - Selenium build info: version: '3.9.1', revision: '63f7b50'
-15:34:57.348 INFO - Launching a standalone Selenium Server on port 8080
-2018-06-03 15:34:57.492:INFO::main: Logging initialized @439ms to org.seleniumhq.jetty9.util.log.StdErrLog
-2018-06-03 15:34:57.587:INFO:osjs.Server:main: jetty-9.4.7.v20170914, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
-2018-06-03 15:34:57.606:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@21e360a{/,null,STARTING} has uncovered http methods for path: /
-2018-06-03 15:34:57.609:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@21e360a{/,null,AVAILABLE}
-2018-06-03 15:34:57.631:INFO:osjs.AbstractConnector:main: Started ServerConnector@11392934{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
-2018-06-03 15:34:57.631:INFO:osjs.Server:main: Started @579ms
-15:34:57.632 INFO - Selenium Server is up and running on port 8080
-2018-06-03 15:34:57.795:INFO:osjshC.ROOT:qtp1803669141-13: org.openqa.selenium.remote.server.WebDriverServlet-55b53d44: Initialising WebDriverServlet
-15:34:57.840 INFO - Found handler: org.openqa.selenium.remote.server.commandhandler.BeginSession@6a8848a5
-15:34:57.843 INFO - /session: Executing POST on /session (handler: BeginSession)
-15:34:57.895 INFO - Capabilities are: Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test}
-15:34:57.896 INFO - Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test} matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
-1528036497926	geckodriver	INFO	geckodriver 0.20.0
-1528036497992	geckodriver	INFO	Listening on 127.0.0.1:11252
-1528036499182	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/2n/vkwlwwkj5pv0ld5d2g234mbw0000gn/T/rust_mozprofile.HXDAqAQRuJjI"
-1528036499572	Marionette	INFO	Enabled via --marionette
-2018-06-03 15:35:00.287 plugin-container[6123:237669] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8603, name = 'com.apple.tsm.portname'
+07:04:14.040 INFO - Selenium build info: version: '3.9.1', revision: '63f7b50'
+07:04:14.041 INFO - Launching a standalone Selenium Server on port 4444
+2018-06-22 07:04:14.265:INFO::main: Logging initialized @618ms to org.seleniumhq.jetty9.util.log.StdErrLog
+2018-06-22 07:04:14.418:INFO:osjs.Server:main: jetty-9.4.7.v20170914, build timestamp: 2017-11-21T21:27:37Z, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2018-06-22 07:04:14.448:WARN:osjs.SecurityHandler:main: ServletContext@o.s.j.s.ServletContextHandler@21e360a{/,null,STARTING} has uncovered http methods for path: /
+2018-06-22 07:04:14.454:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@21e360a{/,null,AVAILABLE}
+2018-06-22 07:04:14.483:INFO:osjs.AbstractConnector:main: Started ServerConnector@11392934{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2018-06-22 07:04:14.483:INFO:osjs.Server:main: Started @836ms
+07:04:14.484 INFO - Selenium Server is up and running on port 4444
+2018-06-22 07:04:14.674:INFO:osjshC.ROOT:qtp1803669141-15: org.openqa.selenium.remote.server.WebDriverServlet-55b53d44: Initialising WebDriverServlet
+07:04:14.738 INFO - Found handler: org.openqa.selenium.remote.server.commandhandler.BeginSession@62974a39
+07:04:14.743 INFO - /session: Executing POST on /session (handler: BeginSession)
+07:04:14.824 INFO - Capabilities are: Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test}
+07:04:14.826 INFO - Capabilities {acceptSslCerts: true, browserName: firefox, javascriptEnabled: true, marionette: true, name: Login Test} matched class org.openqa.selenium.remote.server.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1529647454882	geckodriver	INFO	geckodriver 0.21.0
+1529647454893	geckodriver	INFO	Listening on 127.0.0.1:6819
+1529647455221	mozrunner::runner	INFO	Running command: "/Users/user/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/jh/jw_fjdfn5_b_p7wwd5lqxhz00000gn/T/rust_mozprofile.kjVxmm2CqgnF"
+1529647455906	Marionette	INFO	Enabled via --marionette
+2018-06-22 07:04:17.045 plugin-container[19434:2938750] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xa137, name = 'com.apple.tsm.portname'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-1528036500562	Marionette	INFO	Listening on port 55601
-15:35:00.697 INFO - Detected dialect: W3C
-15:35:00.760 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
-15:35:00.760 INFO - Handler thread for session f882e761-0a5a-b444-8b19-56a57837dfbf (firefox): Executing POST on /session/f882e761-0a5a-b444-8b19-56a57837dfbf/url (handler: ServicedSession)
-15:35:00.969 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
-15:35:00.970 INFO - Handler thread for session f882e761-0a5a-b444-8b19-56a57837dfbf (firefox): Executing POST on /session/f882e761-0a5a-b444-8b19-56a57837dfbf/element (handler: ServicedSession)
-15:35:01.083 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@12bb9576
-15:35:01.084 INFO - Handler thread for session f882e761-0a5a-b444-8b19-56a57837dfbf (firefox): Executing DELETE on /session/f882e761-0a5a-b444-8b19-56a57837dfbf (handler: ServicedSession)
-1528036501100	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 125"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:125 < onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:141 < _middleware/</<()@resource://activity-stream/lib/Store.jsm:51 < Store/this[method]()@resource://activity-stream/lib/Store.jsm:30 < uninit()@resource://activity-stream/lib/Store.jsm:153 < uninit()@resource://activity-stream/lib/ActivityStream.jsm:274 < uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///Applications/Firefox.app/Contents/Resources/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:80 < shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///Applications/Firefox.app/Contents/Resources/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:196 < callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4419 < observe()@resource://gre/modules/addons/XPIProvider.jsm:2279 < GeckoDriver.prototype.quit()@driver.js:3270 < despatch()@server.js:557 < execute()@server.js:531 < onPacket/<()@server.js:506 < onPacket()@server.js:505 < _onJSONObjectReady/<()@transport.js:500
+1529647457462	Marionette	INFO	Listening on port 53486
+07:04:17.627 INFO - Detected dialect: W3C
+07:04:17.728 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@31b69ccf
+07:04:17.729 INFO - Handler thread for session 40476d6d-6bf1-3d49-9a90-8652c1210057 (firefox): Executing POST on /session/40476d6d-6bf1-3d49-9a90-8652c1210057/url (handler: ServicedSession)
+07:04:18.162 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@31b69ccf
+07:04:18.166 INFO - Handler thread for session 40476d6d-6bf1-3d49-9a90-8652c1210057 (firefox): Executing POST on /session/40476d6d-6bf1-3d49-9a90-8652c1210057/elements (handler: ServicedSession)
+07:04:18.214 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@31b69ccf
+07:04:18.215 INFO - Handler thread for session 40476d6d-6bf1-3d49-9a90-8652c1210057 (firefox): Executing POST on /session/40476d6d-6bf1-3d49-9a90-8652c1210057/url (handler: ServicedSession)
+2018-06-22 07:04:18.288 plugin-container[19435:2938822] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9d37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+07:04:18.317 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@31b69ccf
+07:04:18.318 INFO - Handler thread for session 40476d6d-6bf1-3d49-9a90-8652c1210057 (firefox): Executing POST on /session/40476d6d-6bf1-3d49-9a90-8652c1210057/elements (handler: ServicedSession)
+07:04:18.342 INFO - Found handler: org.openqa.selenium.remote.server.ServicedSession@31b69ccf
+07:04:18.343 INFO - Handler thread for session 40476d6d-6bf1-3d49-9a90-8652c1210057 (firefox): Executing DELETE on /session/40476d6d-6bf1-3d49-9a90-8652c1210057 (handler: ServicedSession)
+1529647458360	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 125"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:125 < onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:141 < _middleware/</<()@resource://activity-stream/lib/Store.jsm:51 < Store/this[method]()@resource://activity-stream/lib/Store.jsm:30 < uninit()@resource://activity-stream/lib/Store.jsm:153 < uninit()@resource://activity-stream/lib/ActivityStream.jsm:274 < uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///Users/user/Applications/Firefox.app/Contents/Resources/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:80 < shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///Users/user/Applications/Firefox.app/Contents/Resources/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:196 < callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4419 < observe()@resource://gre/modules/addons/XPIProvider.jsm:2279 < GeckoDriver.prototype.quit()@driver.js:3270 < despatch()@server.js:557 < execute()@server.js:531 < onPacket/<()@server.js:506 < onPacket()@server.js:505 < _onJSONObjectReady/<()@transport.js:500
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2C001F,name=PContent::Msg_PreferenceUpdate) Closed channel: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x2C001F,name=PContent::Msg_PreferenceUpdate) Closed channel: cannot send/recv
+
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-1528036501668	geckodriver::marionette	ERROR	Failed to stop browser process
-15:35:01.687 INFO - Removing session org.openqa.selenium.remote.server.ServicedSession@12bb9576
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+07:04:18.957 INFO - Removing session org.openqa.selenium.remote.server.ServicedSession@31b69ccf
