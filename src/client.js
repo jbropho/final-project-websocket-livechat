@@ -9,7 +9,7 @@ function listenForMessages(roomName, cb) {
 
 function subscribeToRoom(roomName, name) {
   socket.emit('joinRoom', roomName, name);
-  // sendMessage(roomName, `${name} has joined ${roomName}`);
+  sendMessage(roomName, {content:'this is a message'});
 }
 
 function sendMessage(roomName, msg) {

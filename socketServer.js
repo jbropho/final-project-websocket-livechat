@@ -4,14 +4,8 @@ const http = require('./httpServer').http,
 
 io.sockets.on('connection', socket => {
 
-  socket.on('joinRoom', roomName, name => {
+  socket.on('joinRoom', roomName => {
     socket.join(roomName);
-    io.to(roomName).emit(roomName, message);
-    Message.create( {
-      username: message.author,
-      roomName: roomName,
-      content: message.content
-    }, err => console.log(err));
 
     Message
       .find({roomName: roomName}, 'username content')
