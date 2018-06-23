@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
@@ -6,7 +6,7 @@ import MessageBoard from './MessageBoard';
 import RoomList from './RoomList';
 import Favicon from 'react-favicon';
 import { listenForMessages, subscribeToRoom, sendMessage } from '../client.js';
-import { defaultRooms } from '../helpers.js'
+import { defaultRooms } from '../helpers.js';
 
 class Chatroom extends Component {
   constructor(props) {
@@ -37,9 +37,9 @@ class Chatroom extends Component {
 
   messageAdder(msg, room = 'main'){
     this.setState(prevState => {
-     prevState.messages[room] = prevState.messages[room].concat(msg);
-     return prevState;
-    })
+      prevState.messages[room] = prevState.messages[room].concat(msg);
+      return prevState;
+    });
   }
 
   render() {
