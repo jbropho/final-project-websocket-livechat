@@ -8,21 +8,22 @@ html
     script(src="../../scripts/landingPage.js")
 
   body
-    div#header 
-    div#auth-form 
+    div#header
+    div#auth-form
      div#input-wrapper
+        img(src="../logo.png" alt="Smiley face" height="100" width="103" id="logo")
         p#form-title Log in
         div#input-header
         div#username-input
           label(for='username') Username
           br
           input(id="username-field" type="text")
-          br 
+          br
         div#password-input
           label(for='password') Password
           br
           input#password(type='password', name='password')
         div#log-in-btn
-          br 
+          br
           button#login-btn(type='submit') Login
         div#input-footer
