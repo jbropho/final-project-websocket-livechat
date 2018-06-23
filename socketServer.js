@@ -4,8 +4,14 @@ const http = require('./httpServer').http,
 
 io.sockets.on('connection', socket => {
 
-  socket.on('joinRoom', roomName => {
+  socket.on('joinRoom', roomName, name => {
     socket.join(roomName);
+    io.to(roomName).emit(roomName, message);
+    Message.create( {
+      username: message.author,
+      roomName: roomName,
+      content: message.content
+    }, err => console.log(err));
 
       Message
       .find({roomName: roomName}, 'username content')
@@ -31,8 +37,8 @@ io.sockets.on('connection', socket => {
     });
 
     socket.on('wantToDie', name => {
-      console.log(`${name} left`);
-      socket.disconnect();
+    console.log(`${name} left`);
+  socket.disconnect();
     });
 
     socket.on('clientJoin', name => {
