@@ -30,7 +30,12 @@ describe('Client', function() {
       spyOn(socket, 'emit');
       subscribeToRoom('clientJoin');
       expect(socket.emit).toHaveBeenCalled();
-    })
+    });
+    it('makes a call to sendMessage, which will call socket.emit a second time', function() {
+      spyOn(socket, 'emit');
+      subscribeToRoom('clientJoin');
+      expect(socket.emit).toHaveBeenCalledTimes(2);
+    });
   });
 
   describe('killSocket', function() {

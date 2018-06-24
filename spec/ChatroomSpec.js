@@ -1,19 +1,19 @@
-import React, { Component} from "react";
-import ReactDOM from "react-dom";
-import { mount } from "enzyme";
+import React, { Component} from 'react';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import { shallow } from 'enzyme';
-import Chatroom from "../src/ChatroomComponents/Chatroom";
+import Chatroom from '../src/ChatroomComponents/Chatroom';
 
 describe('Chatroom', function() {
   var makeChatroom,
     chatroom,
     props;
-
   beforeEach(done => {
     props = {messages: [{ author: 'Xibit', content: 'Looking 4ward to tha next season of pimp my ride'}]};
 
+
     makeChatroom = _ => {
-      chatroom = mount(<Chatroom {...props}/>)
+      chatroom = mount(<Chatroom {...props}/>);
       return chatroom;
     };
     done();
@@ -34,8 +34,9 @@ describe('Chatroom', function() {
     const chat = shallow(<Chatroom />);
     var room;
 
-    beforeEach(function() {
+    beforeEach(function(done) {
       room = chat.instance();
+
     });
 
     it('returns true when in a room', done => {
@@ -58,7 +59,12 @@ describe('Chatroom', function() {
     beforeEach(function() {
       room = chat.instance();
     });
-
+    it('adds a room to activeRooms if user not already in room', done => {
+      room.state = { activeRooms: [], messages: {} };
+      room.joinRoom('the-thing');
+      expect(room.state.activeRooms[0]).toMatch(/the-thing/);
+      done();
+    });
     it('adds a room to activeRooms if user not already in room', done => {
       room.state = { activeRooms: [], messages: {} };
       room.joinRoom('the-thing');
@@ -86,7 +92,7 @@ describe('Chatroom', function() {
     expect(result.length).toBeGreaterThan(0);
     done();
   });
-  
+
   it('starts with no messages', done => {
     const result = makeChatroom().find('.message');
     expect(result.length).toEqual(0);
