@@ -62,3 +62,4 @@ careful and explicit with how connections (http and websockets) were opened in o
 - Print a message in chat when a user joins and leaves the room
 - Add an option for the user to add rooms
 - Implement chat bot
+- Add build deployment to travis post build script 
